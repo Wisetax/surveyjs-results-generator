@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <link href="https://unpkg.com/survey-vue/survey.min.css" type="text/css" rel="stylesheet"/>
+    <link href="./assets/main.css" type="text/css" rel="stylesheet"/>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/survey-vue"></script>
+
+  </head>
+  <body>
+
+    <div id='loader' v-show='state.loading'>
+      <img src='./assets/loading.gif'>
+    </div>
+
+    <div class='header'>
+      SurveyJs Results Generator (by Wisetax)
+    </div>
+
+    <div id='jsonentry' v-show="!state.loaded" >
+      
+      <span class='instructions'>Paste Here the json from surveyjs</span>
+      <textarea v-model="json" placeholder="Paste survey here"> </textarea>
+      <label>Number of cases to generate:</label>
+      <input v-model="state.numberCase" type='number'>
+      <button v-on:click="generateForm">Create Form</button>
+    </div>
+
+    <div id="surveyContainer" v-show='state.loaded'>
+      <!-- <div style="height:100px">
+        {{ state.loaded }}
+      </div> -->
+      <span class='instructions'>Fill fields to constrain and press generate</span>
+      <survey :survey="state.survey"></survey>
+    </div>
+
+    <div id='generatorButton'>
+      <button v-on:click="generate">Generate</button>
+    </div>
+
+    <a id='downloadAnchorElem'></a>
+  </body>
+  <footer>
+    <script src="dist/bundle.js"></script> 
+  </footer>
+
+</html>

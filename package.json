@@ -1,0 +1,16 @@
+{
+  "name": "survey-results-generator",
+  "version": "1.0.0",
+  "description": "Generate results for survey js",
+  "main": "generator.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "author": "Stan Bienaive",
+  "license": "ISC",
+  "dependencies": {
+    "survey-vue": "^1.5.19",
+    "surveyjs": "^2.0.4",
+    "vue": "^2.6.11"
+  }
+}

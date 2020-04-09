@@ -1,0 +1,6229 @@
+{
+ "locale": "fr",
+ "pages": [
+  {
+   "name": "siege",
+   "elements": [
+    {
+     "type": "text",
+     "name": "nomSociete",
+     "title": {
+      "fr": "Nom de la société / du groupe ayant un potentiel établissement stable en France"
+     },
+     "isRequired": true
+    },
+    {
+     "type": "radiogroup",
+     "name": "lieuEtablissementSiege",
+     "title": {
+      "fr": "Le siège de cette société est établie"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "france",
+       "text": {
+        "fr": "en France"
+       }
+      },
+      {
+       "value": "unionEurope",
+       "text": {
+        "fr": "au sein de l'Union européenne"
+       }
+      },
+      {
+       "value": "horsUnionEurope",
+       "text": {
+        "fr": "hors de l'Union européenne"
+       }
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "etatUnionEurope",
+     "visibleIf": "{lieuEtablissementSiege} = \"unionEurope\"",
+     "title": {
+      "fr": "Dans quel Etat ?"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "allemagne",
+       "text": "Allemagne"
+      },
+      {
+       "value": "autriche",
+       "text": "Autriche"
+      },
+      {
+       "value": "belgique",
+       "text": "Belgique"
+      },
+      {
+       "value": "bulgarie",
+       "text": "Bulgarie"
+      },
+      {
+       "value": "chypre",
+       "text": "Chypre"
+      },
+      {
+       "value": "croatie",
+       "text": "Croatie"
+      },
+      {
+       "value": "danemark",
+       "text": "Danemark"
+      },
+      {
+       "value": "espagne",
+       "text": "Espagne"
+      },
+      {
+       "value": "estonie",
+       "text": "Estonie"
+      },
+      {
+       "value": "finlande",
+       "text": "Finlande"
+      },
+      {
+       "value": "grece",
+       "text": "Grèce"
+      },
+      {
+       "value": "hongrie",
+       "text": "Hongrie"
+      },
+      {
+       "value": "irlande",
+       "text": "Irlande"
+      },
+      {
+       "value": "italie",
+       "text": "Italie"
+      },
+      {
+       "value": "lettonie",
+       "text": "Lettonie"
+      },
+      {
+       "value": "lituanie",
+       "text": "Lituanie"
+      },
+      {
+       "value": "luxembourg",
+       "text": "Luxembourg"
+      },
+      {
+       "value": "malte",
+       "text": "Malte"
+      },
+      {
+       "value": "paysBas",
+       "text": "Pays-Bas"
+      },
+      {
+       "value": "pologne",
+       "text": "Pologne"
+      },
+      {
+       "value": "portugal",
+       "text": "Portugal"
+      },
+      {
+       "value": "republiqueTcheque",
+       "text": "République tchèque"
+      },
+      {
+       "value": "royaumeUni",
+       "text": " Royaume-Uni"
+      },
+      {
+       "value": "roumanie",
+       "text": "Roumanie"
+      },
+      {
+       "value": "slovaquie",
+       "text": "Slovaquie"
+      },
+      {
+       "value": "slovenie",
+       "text": "Slovénie"
+      },
+      {
+       "value": "suede",
+       "text": "Suède"
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "etatHorsUnionEurope",
+     "visibleIf": "{lieuEtablissementSiege} = \"horsUnionEurope\"",
+     "title": {
+      "fr": "Dans quel Etat ou territoire"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "afghanistan",
+       "text": "Afghanistan"
+      },
+      {
+       "value": "afrique du sud",
+       "text": "Afrique du Sud"
+      },
+      {
+       "value": "albanie",
+       "text": "Albanie"
+      },
+      {
+       "value": "algerie",
+       "text": "Algérie"
+      },
+      {
+       "value": "andorra",
+       "text": "Andorre"
+      },
+      {
+       "value": "angola",
+       "text": "Angola"
+      },
+      {
+       "value": "anguilla",
+       "text": "Anguilla"
+      },
+      {
+       "value": "antarctique",
+       "text": "Antarctique"
+      },
+      {
+       "value": "antiguaBarbuda",
+       "text": "Antigua et Barbuda"
+      },
+      {
+       "value": "antillesNeerlandaises",
+       "text": "Antilles Néerlandaises"
+      },
+      {
+       "value": "arabieSaoudite",
+       "text": "Arabie Saoudite"
+      },
+      {
+       "value": "argentine",
+       "text": "Argentine"
+      },
+      {
+       "value": "armenie",
+       "text": "Arménie"
+      },
+      {
+       "value": "aruba",
+       "text": "Aruba"
+      },
+      {
+       "value": "australie",
+       "text": "Australie"
+      },
+      {
+       "value": "azerbaidjan",
+       "text": "Azerbaïdjan"
+      },
+      {
+       "value": "bahamas",
+       "text": "Bahamas"
+      },
+      {
+       "value": "bahrein",
+       "text": "Bahreïn"
+      },
+      {
+       "value": "bangladesh",
+       "text": "Bangladesh"
+      },
+      {
+       "value": "bielorussie",
+       "text": "Biélorussie"
+      },
+      {
+       "value": "belize",
+       "text": "Belize"
+      },
+      {
+       "value": "benin",
+       "text": "Bénin"
+      },
+      {
+       "value": "bermudes",
+       "text": "Bermudes"
+      },
+      {
+       "value": "bhoutan",
+       "text": "Bhoutan"
+      },
+      {
+       "value": "bolivie",
+       "text": "Bolivie"
+      },
+      {
+       "value": "bosnie",
+       "text": "Bosnie Herzégovine"
+      },
+      {
+       "value": "botswana",
+       "text": "Botswana"
+      },
+      {
+       "value": "bouvet",
+       "text": "Île De Bouvet"
+      },
+      {
+       "value": "bresil",
+       "text": "Brésil"
+      },
+      {
+       "value": "brunei",
+       "text": "Brunei Darussalam"
+      },
+      {
+       "value": "burkinaFaso",
+       "text": "Burkina Faso"
+      },
+      {
+       "value": "burundi",
+       "text": "Burundi"
+      },
+      {
+       "value": "cambodge",
+       "text": "Cambodge"
+      },
+      {
+       "value": "cameroun",
+       "text": "Cameroun"
+      },
+      {
+       "value": "canada",
+       "text": "Canada"
+      },
+      {
+       "value": "capVert",
+       "text": "Cap Vert"
+      },
+      {
+       "value": "cayman",
+       "text": "Îles Cayman"
+      },
+      {
+       "value": "centrafricaine",
+       "text": "République Centrafricaine"
+      },
+      {
+       "value": "ceuta",
+       "text": "Ceuta"
+      },
+      {
+       "value": "chili",
+       "text": "Chili"
+      },
+      {
+       "value": "chine",
+       "text": "Chine"
+      },
+      {
+       "value": "christmas",
+       "text": "Île Christmas"
+      },
+      {
+       "value": "cocosKeeling",
+       "text": "Îles Cocos (Keeling)"
+      },
+      {
+       "value": "colombie",
+       "text": "Colombie"
+      },
+      {
+       "value": "comores",
+       "text": "Comores"
+      },
+      {
+       "value": "congo",
+       "text": "Congo"
+      },
+      {
+       "value": "republiqueDemocratiqueCongo",
+       "text": "République Démocratique Du Congo"
+      },
+      {
+       "value": "cook",
+       "text": "Îles Cook"
+      },
+      {
+       "value": "coreeNord",
+       "text": "Corée du Nord"
+      },
+      {
+       "value": "coreeSud",
+       "text": "Corée du Sud"
+      },
+      {
+       "value": "costaRica",
+       "text": "Costa Rica"
+      },
+      {
+       "value": "coteIvoire",
+       "text": "Côte d'Ivoire"
+      },
+      {
+       "value": "cuba",
+       "text": "Cuba"
+      },
+      {
+       "value": "djibouti",
+       "text": "Djibouti"
+      },
+      {
+       "value": "republiqueDominicaine",
+       "text": "République Dominicaine"
+      },
+      {
+       "value": "dominique",
+       "text": "Dominique"
+      },
+      {
+       "value": "egypte",
+       "text": "Egypte"
+      },
+      {
+       "value": "emiratsArabesUnis",
+       "text": "Emirats Arabes Unis"
+      },
+      {
+       "value": "equateur",
+       "text": "Equateur"
+      },
+      {
+       "value": "erythree",
+       "text": "Erythrée"
+      },
+      {
+       "value": "usa",
+       "text": "Etats-unis"
+      },
+      {
+       "value": "ilesMineurs",
+       "text": "Îles Mineurs Éloignées Des Etats-unis"
+      },
+      {
+       "value": "ethiopie",
+       "text": "Ethiopie"
+      },
+      {
+       "value": "ilesFeroe",
+       "text": "Îles Féroé"
+      },
+      {
+       "value": "fidji",
+       "text": "Fidji"
+      },
+      {
+       "value": "gabon",
+       "text": "Gabon"
+      },
+      {
+       "value": "gambie",
+       "text": "Gambie"
+      },
+      {
+       "value": "georgie",
+       "text": "Georgie"
+      },
+      {
+       "value": "georgieSud",
+       "text": "Georgie Du Sud et Îles Sandwich Du Sud"
+      },
+      {
+       "value": "ghana",
+       "text": "Ghana"
+      },
+      {
+       "value": "gibraltar",
+       "text": "Gibraltar"
+      },
+      {
+       "value": "grenade",
+       "text": "Grenade"
+      },
+      {
+       "value": "groenland",
+       "text": "Groenland"
+      },
+      {
+       "value": "guam",
+       "text": "Guam"
+      },
+      {
+       "value": "guatemala",
+       "text": "Guatemala"
+      },
+      {
+       "value": "guinee",
+       "text": "Guinée"
+      },
+      {
+       "value": "guineeEquatoriale",
+       "text": "Guinée Equatoriale"
+      },
+      {
+       "value": "guineeBissau",
+       "text": "Guinée-bissau"
+      },
+      {
+       "value": "guyana",
+       "text": "Guyana"
+      },
+      {
+       "value": "haiti",
+       "text": "Haïti"
+      },
+      {
+       "value": "honduras",
+       "text": "Honduras"
+      },
+      {
+       "value": "hongKong",
+       "text": "Hong-Kong"
+      },
+      {
+       "value": "inde",
+       "text": "Inde"
+      },
+      {
+       "value": "indonesie",
+       "text": "Indonésie"
+      },
+      {
+       "value": "irak",
+       "text": "Irak"
+      },
+      {
+       "value": "iran",
+       "text": "Iran"
+      },
+      {
+       "value": "islande",
+       "text": "Islande"
+      },
+      {
+       "value": "israel",
+       "text": "Israël"
+      },
+      {
+       "value": "jamaique",
+       "text": "Jamaïque"
+      },
+      {
+       "value": "japon",
+       "text": "Japon"
+      },
+      {
+       "value": "jordanie",
+       "text": "Jordanie"
+      },
+      {
+       "value": "kazakhstan",
+       "text": "Kazakhstan"
+      },
+      {
+       "value": "kenya",
+       "text": "Kenya"
+      },
+      {
+       "value": "kirghizstan",
+       "text": "Kirghizstan"
+      },
+      {
+       "value": "kiribati",
+       "text": "Kiribati"
+      },
+      {
+       "value": "koweit",
+       "text": "Koweit"
+      },
+      {
+       "value": "laos",
+       "text": "Laos"
+      },
+      {
+       "value": "lesotho",
+       "text": "Lesotho"
+      },
+      {
+       "value": "liban",
+       "text": "Liban"
+      },
+      {
+       "value": "liberia",
+       "text": "Liberia"
+      },
+      {
+       "value": "libye",
+       "text": "Libye"
+      },
+      {
+       "value": "liechtenstein",
+       "text": "Liechtenstein"
+      },
+      {
+       "value": "macao",
+       "text": "Macao"
+      },
+      {
+       "value": "macedoine",
+       "text": "Macédoine"
+      },
+      {
+       "value": "madagascar",
+       "text": "Madagascar"
+      },
+      {
+       "value": "malaisie",
+       "text": "Malaisie"
+      },
+      {
+       "value": "malawi",
+       "text": "Malawi"
+      },
+      {
+       "value": "maldives",
+       "text": "Maldives"
+      },
+      {
+       "value": "mali",
+       "text": "Mali"
+      },
+      {
+       "value": "malouines",
+       "text": "Îles Malouines"
+      },
+      {
+       "value": "marianne",
+       "text": "Îles Marianne Du Nord"
+      },
+      {
+       "value": "maroc",
+       "text": "Maroc"
+      },
+      {
+       "value": "marshall",
+       "text": "Îles Marshall"
+      },
+      {
+       "value": "maurice",
+       "text": "Maurice"
+      },
+      {
+       "value": "mauritanie",
+       "text": "Mauritanie"
+      },
+      {
+       "value": "melilla",
+       "text": "Melilla"
+      },
+      {
+       "value": "mexique",
+       "text": "Mexique"
+      },
+      {
+       "value": "micronesie",
+       "text": "Etats Federes De Micronesie"
+      },
+      {
+       "value": "moldavie",
+       "text": "République De Moldavie"
+      },
+      {
+       "value": "mongolie",
+       "text": "Mongolie"
+      },
+      {
+       "value": "montenegro",
+       "text": "Montenegro"
+      },
+      {
+       "value": "montserrat",
+       "text": "Montserrat"
+      },
+      {
+       "value": "mozambique",
+       "text": "Mozambique"
+      },
+      {
+       "value": "myanmar",
+       "text": "Myanmar"
+      },
+      {
+       "value": "namibie",
+       "text": "Namibie"
+      },
+      {
+       "value": "nauru",
+       "text": "Nauru"
+      },
+      {
+       "value": "nepal",
+       "text": "Népal"
+      },
+      {
+       "value": "nicaragua",
+       "text": "Nicaragua"
+      },
+      {
+       "value": "niger",
+       "text": "Niger"
+      },
+      {
+       "value": "nigeria",
+       "text": "Nigeria"
+      },
+      {
+       "value": "niue",
+       "text": "Niue"
+      },
+      {
+       "value": "norfolk",
+       "text": "Îles Norfolk"
+      },
+      {
+       "value": "norvege",
+       "text": "Norvège"
+      },
+      {
+       "value": "nouvelleCaledonie",
+       "text": "Nouvelle-Calédonie"
+      },
+      {
+       "value": "nouvelleZelande",
+       "text": "Nouvelle-Zélande"
+      },
+      {
+       "value": "territoireBritanniqueIndien",
+       "text": "Territoire Britannique de l'océan Indien"
+      },
+      {
+       "value": "oman",
+       "text": "Oman"
+      },
+      {
+       "value": "ouganda",
+       "text": "Ouganda"
+      },
+      {
+       "value": "ouzbekistan",
+       "text": "Ouzbékistan"
+      },
+      {
+       "value": "pakistan",
+       "text": "Pakistan"
+      },
+      {
+       "value": "palaos",
+       "text": "Palaos"
+      },
+      {
+       "value": "panama",
+       "text": "Panama"
+      },
+      {
+       "value": "papouasie",
+       "text": "Papouasie Nouvelle-guinée"
+      },
+      {
+       "value": "paraguay",
+       "text": "Paraguay"
+      },
+      {
+       "value": "perou",
+       "text": "Pérou"
+      },
+      {
+       "value": "philippines",
+       "text": "Philippines"
+      },
+      {
+       "value": "pitcairn",
+       "text": "Îles Pitcairn"
+      },
+      {
+       "value": "polynesieFranc",
+       "text": "Polynésie Française"
+      },
+      {
+       "value": "qatar",
+       "text": "Qatar"
+      },
+      {
+       "value": "russie",
+       "text": "Russie"
+      },
+      {
+       "value": "rwanda",
+       "text": "Rwanda"
+      },
+      {
+       "value": "saintBarthelemy",
+       "text": "Saint-Barthelemy"
+      },
+      {
+       "value": "saintChristophe",
+       "text": "Saint-Christophe-et-nevis"
+      },
+      {
+       "value": "sainteLucie",
+       "text": "Sainte-Lucie"
+      },
+      {
+       "value": "saintHelene",
+       "text": "Saint-Hélène"
+      },
+      {
+       "value": "saintMarin",
+       "text": "Saint-Marin"
+      },
+      {
+       "value": "saintPierre",
+       "text": "Saint-Pierre et Miquelon"
+      },
+      {
+       "value": "saintVincent",
+       "text": "Saint-Vincent et Les Grenadines"
+      },
+      {
+       "value": "salomon",
+       "text": "Îles Salomon"
+      },
+      {
+       "value": "salvador",
+       "text": "Salvador"
+      },
+      {
+       "value": "samoa",
+       "text": "Samoa"
+      },
+      {
+       "value": "samoaAmericaine",
+       "text": "Samoa Americaine"
+      },
+      {
+       "value": "saoTome",
+       "text": "Sao Tomé Et Principe"
+      },
+      {
+       "value": "senegal",
+       "text": "Senegal"
+      },
+      {
+       "value": "serbie",
+       "text": "Serbie"
+      },
+      {
+       "value": "seychelles",
+       "text": "Seychelles"
+      },
+      {
+       "value": "sierraLeone",
+       "text": "Sierra Leone"
+      },
+      {
+       "value": "singapour",
+       "text": "Singapour"
+      },
+      {
+       "value": "somalie",
+       "text": "Somalie"
+      },
+      {
+       "value": "soudan",
+       "text": "Soudan"
+      },
+      {
+       "value": "sriLanka",
+       "text": "Sri Lanka"
+      },
+      {
+       "value": "sud soudan",
+       "text": "Sud Soudan"
+      },
+      {
+       "value": "suisse",
+       "text": "Suisse"
+      },
+      {
+       "value": "suriname",
+       "text": "Suriname"
+      },
+      {
+       "value": "swaziland",
+       "text": "Swaziland"
+      },
+      {
+       "value": "syrie",
+       "text": "Syrie"
+      },
+      {
+       "value": "tadjikistan",
+       "text": "Tadjikistan"
+      },
+      {
+       "value": "taiwan",
+       "text": "Taiwan"
+      },
+      {
+       "value": "tanzanie",
+       "text": "Tanzanie"
+      },
+      {
+       "value": "tchad",
+       "text": "Tchad"
+      },
+      {
+       "value": "terresAustralesAntarctiques",
+       "text": "Terres Australes et Antarctiques"
+      },
+      {
+       "value": "thailande",
+       "text": "Thaïlande"
+      },
+      {
+       "value": "timor oriental",
+       "text": "Timor Oriental"
+      },
+      {
+       "value": "togo",
+       "text": "Togo"
+      },
+      {
+       "value": "tokelau",
+       "text": "Tokelau"
+      },
+      {
+       "value": "tonga",
+       "text": "Tonga"
+      },
+      {
+       "value": "trinidad",
+       "text": "Trinidad Et Tobago"
+      },
+      {
+       "value": "tunisie",
+       "text": "Tunisie"
+      },
+      {
+       "value": "turkmenistan",
+       "text": "Turkmenistan"
+      },
+      {
+       "value": "turksCaicos",
+       "text": "Îles Turks Et Caicos"
+      },
+      {
+       "value": "turquie",
+       "text": "Turquie"
+      },
+      {
+       "value": "tuvalu",
+       "text": "Tuvalu"
+      },
+      {
+       "value": "ukraine",
+       "text": "Ukraine"
+      },
+      {
+       "value": "uruguay",
+       "text": "Uruguay"
+      },
+      {
+       "value": "vanuatu",
+       "text": "Vanuatu"
+      },
+      {
+       "value": "vatican",
+       "text": "Vatican"
+      },
+      {
+       "value": "venezuela",
+       "text": "Venezuela"
+      },
+      {
+       "value": "viergesBritanniques",
+       "text": "Îles Vierges britanniques"
+      },
+      {
+       "value": "viergesUsa",
+       "text": "Îles Vierges des États-unis"
+      },
+      {
+       "value": "vietNam",
+       "text": {
+        "default": "Viet Nam",
+        "fr": "Viet-Nam"
+       }
+      },
+      {
+       "value": "wallisFutuna",
+       "text": "Wallis et Futuna"
+      },
+      {
+       "value": "yemen",
+       "text": "Yémen"
+      },
+      {
+       "value": "zambie",
+       "text": "Zambie"
+      },
+      {
+       "value": "zimbabwe",
+       "text": "Zimbabwe"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationSiegeStatutaireHfr",
+     "title": {
+      "fr": "L'Etat renseigné est le lieu d'établissement du siège statutaire"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "fr": "Oui"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "fr": "Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationSiegeDecisionPlaceHfr",
+     "title": {
+      "fr": "Le siège indiqué est le lieu où sont prises les décisions stratégiques / majeurs de la société"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "fr": "Oui"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "fr": "Non, les décisions stratégiques sont prises dans un autre lieu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationSiegeAutreElementHfr",
+     "visibleIf": "{confirmationSiegeDecisionPlaceHfr} = \"false\" and {confirmationSiegeStatutaireHfr} = \"false\"",
+     "title": {
+      "fr": "Le siège indiqué est le lieu de réunion des assemblées générales / où sont tenus les documents administratifs financiers"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "fr": "Oui"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "fr": "Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationSiegeFrVatId",
+     "title": {
+      "fr": "Le siège indiqué est immatriculé / représenté pour les besoins de la TVA en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "fr": "Oui, la société est immatriculée à la TVA en France"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "fr": "Non"
+       }
+      }
+     ]
+    }
+   ],
+   "title": {
+    "fr": "Présentation de la société / du groupe"
+   }
+  },
+  {
+   "name": "activite_societe",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "regionActivite",
+     "title": {
+      "fr": "La société / le groupe exerce son activité"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "unionEurope",
+       "text": {
+        "fr": "uniquement sur le territoire de la communauté europréenne"
+       }
+      },
+      {
+       "value": "horsUnionEurope",
+       "text": {
+        "fr": "à travers le monde"
+       }
+      }
+     ]
+    },
+    {
+     "type": "matrixdynamic",
+     "name": "activiteMondes",
+     "visibleIf": "{regionActivite} = \"horsUnionEurope\"",
+     "title": {
+      "fr": "Indiquez les principaux Etats / territoire où le groupe / la société exerce son activité (hors France)"
+     },
+     "isRequired": true,
+     "columns": [
+      {
+       "name": "etatMondeActiviteSociete",
+       "title": {
+        "fr": "Nom de l'Etat / du terriroire"
+       },
+       "cellType": "dropdown",
+       "isRequired": true
+      },
+      {
+       "name": "moyenHumainSocieteMonde",
+       "title": {
+        "fr": "La société / le groupe  emploie..."
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "zero",
+         "text": {
+          "fr": "0 employé"
+         }
+        },
+        {
+         "value": "dix",
+         "text": {
+          "fr": "1-10 employés"
+         }
+        },
+        {
+         "value": "cinquante",
+         "text": {
+          "fr": "1-50"
+         }
+        },
+        {
+         "value": "cinquanteToCinqCent",
+         "text": {
+          "fr": "50-500"
+         }
+        },
+        {
+         "value": "cinqCent",
+         "text": {
+          "fr": "plus de 500"
+         }
+        }
+       ]
+      },
+      {
+       "name": "moyenMaterielSocieteMonde",
+       "title": {
+        "fr": "Le groupe dispose dans cet Etat"
+       },
+       "cellType": "radiogroup",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "succursale",
+         "text": {
+          "fr": "de succursale(s)"
+         }
+        },
+        {
+         "value": "filiale",
+         "text": {
+          "fr": "de filiale(s)"
+         }
+        },
+        {
+         "value": "bureauRepresentation",
+         "text": {
+          "fr": "d'un bureau de liaison / représentation"
+         }
+        },
+        {
+         "value": "chantier",
+         "text": {
+          "fr": "d'un chantier de construction"
+         }
+        }
+       ]
+      }
+     ],
+     "choices": [
+      {
+       "value": "afghanistan",
+       "text": "Afghanistan"
+      },
+      {
+       "value": "afrique du sud",
+       "text": "Afrique Du Sud"
+      },
+      {
+       "value": "albanie",
+       "text": "Albanie"
+      },
+      {
+       "value": "algerie",
+       "text": "Algérie"
+      },
+      {
+       "value": "allemagne",
+       "text": "Allemagne"
+      },
+      {
+       "value": "andorra",
+       "text": "Andorra"
+      },
+      {
+       "value": "angola",
+       "text": "Angola"
+      },
+      {
+       "value": "anguilla",
+       "text": "Anguilla"
+      },
+      {
+       "value": "antarctique",
+       "text": "Antarctique"
+      },
+      {
+       "value": "antiguaBarbuda",
+       "text": "Antigua Et Barbuda"
+      },
+      {
+       "value": "antillesNeerlandaises",
+       "text": "Antilles Néerlandaises"
+      },
+      {
+       "value": "arabieSaoudite",
+       "text": "Arabie Saoudite"
+      },
+      {
+       "value": "value",
+       "text": "text"
+      },
+      {
+       "value": "argentine",
+       "text": "Argentine"
+      },
+      {
+       "value": "armenie",
+       "text": "Arménie"
+      },
+      {
+       "value": "aruba",
+       "text": "Aruba"
+      },
+      {
+       "value": "australie",
+       "text": "Australie"
+      },
+      {
+       "value": "autriche",
+       "text": "Autriche"
+      },
+      {
+       "value": "azerbaidjan",
+       "text": "Azerbaïdjan"
+      },
+      {
+       "value": "bahamas",
+       "text": "Bahamas"
+      },
+      {
+       "value": "bahrein",
+       "text": "Bahreïn"
+      },
+      {
+       "value": "bangladesh",
+       "text": "Bangladesh"
+      },
+      {
+       "value": "belgique",
+       "text": "Belgique"
+      },
+      {
+       "value": "belize",
+       "text": "Belize"
+      },
+      {
+       "value": "benin",
+       "text": "Bénin"
+      },
+      {
+       "value": "bermudes",
+       "text": "Bermudes"
+      },
+      {
+       "value": "bhoutan",
+       "text": "Bhoutan"
+      },
+      {
+       "value": "bielorussie",
+       "text": "Biélorussie"
+      },
+      {
+       "value": "bolivie",
+       "text": "Bolivie"
+      },
+      {
+       "value": "bosnie",
+       "text": "Bosnie Et Herzégovine"
+      },
+      {
+       "value": "botswana",
+       "text": "Botswana"
+      },
+      {
+       "value": "bouvet",
+       "text": "Île De Bouvet"
+      },
+      {
+       "value": "bresil",
+       "text": "Brésil"
+      },
+      {
+       "value": "brunei",
+       "text": "Brunei Darussalam"
+      },
+      {
+       "value": "bulgarie",
+       "text": "Bulgarie"
+      },
+      {
+       "value": "burkinaFaso",
+       "text": "Burkina Faso"
+      },
+      {
+       "value": "burundi",
+       "text": "Burundi"
+      },
+      {
+       "value": "cambodge",
+       "text": "Cambodge"
+      },
+      {
+       "value": "cameroun",
+       "text": "Cameroun"
+      },
+      {
+       "value": "canada",
+       "text": "Canada"
+      },
+      {
+       "value": "capVert",
+       "text": "Cap Vert"
+      },
+      {
+       "value": "cayman",
+       "text": "Îles Cayman"
+      },
+      {
+       "value": "centrafricaine",
+       "text": "République Centrafricaine"
+      },
+      {
+       "value": "ceuta",
+       "text": "Ceuta"
+      },
+      {
+       "value": "chili",
+       "text": "Chili"
+      },
+      {
+       "value": "chine",
+       "text": "Chine"
+      },
+      {
+       "value": "christmas",
+       "text": "Île Christmas"
+      },
+      {
+       "value": "chypre",
+       "text": "Chypre"
+      },
+      {
+       "value": "cocosKeeling",
+       "text": "Îles Cocos (Keeling)"
+      },
+      {
+       "value": "colombie",
+       "text": "Colombie"
+      },
+      {
+       "value": "comores",
+       "text": "Comores"
+      },
+      {
+       "value": "congo",
+       "text": "Congo"
+      },
+      {
+       "value": "cook",
+       "text": "Îles Cook"
+      },
+      {
+       "value": "coreeNord",
+       "text": "Coree Du Nord"
+      },
+      {
+       "value": "coreeSud",
+       "text": "Corée Du Sud"
+      },
+      {
+       "value": "costaRica",
+       "text": "Costa Rica"
+      },
+      {
+       "value": "coteIvoire",
+       "text": "Côte D'ivoire"
+      },
+      {
+       "value": "croatie",
+       "text": "Croatie"
+      },
+      {
+       "value": "cuba",
+       "text": "Cuba"
+      },
+      {
+       "value": "danemark",
+       "text": "Danemark"
+      },
+      {
+       "value": "djibouti",
+       "text": "Djibouti"
+      },
+      {
+       "value": "dominique",
+       "text": "Dominique"
+      },
+      {
+       "value": "egypte",
+       "text": "Egypte"
+      },
+      {
+       "value": "emiratsArabesUnis",
+       "text": "Emirats Arabes Unis"
+      },
+      {
+       "value": "equateur",
+       "text": "Equateur"
+      },
+      {
+       "value": "erythree",
+       "text": "Erythrée"
+      },
+      {
+       "value": "espagne",
+       "text": "Espagne"
+      },
+      {
+       "value": "estonie",
+       "text": "Estonie"
+      },
+      {
+       "value": "ethiopie",
+       "text": "Ethiopie"
+      },
+      {
+       "value": "fidji",
+       "text": "Fidji"
+      },
+      {
+       "value": "finlande",
+       "text": "Finlande"
+      },
+      {
+       "value": "gabon",
+       "text": "Gabon"
+      },
+      {
+       "value": "gambie",
+       "text": "Gambie"
+      },
+      {
+       "value": "georgie",
+       "text": "Georgie"
+      },
+      {
+       "value": "georgieSud",
+       "text": "Georgie Du Sud et Îles Sandwich Du Sud"
+      },
+      {
+       "value": "ghana",
+       "text": "Ghana"
+      },
+      {
+       "value": "gibraltar",
+       "text": "Gibraltar"
+      },
+      {
+       "value": "grece",
+       "text": "Grèce"
+      },
+      {
+       "value": "grenade",
+       "text": "Grenade"
+      },
+      {
+       "value": "groenland",
+       "text": "Groenland"
+      },
+      {
+       "value": "guam",
+       "text": "Guam"
+      },
+      {
+       "value": "guatemala",
+       "text": "Guatemala"
+      },
+      {
+       "value": "guinee",
+       "text": "Guinée"
+      },
+      {
+       "value": "guineeBissau",
+       "text": "Guinée-bissau"
+      },
+      {
+       "value": "guineeEquatoriale",
+       "text": "Guinée Equatoriale"
+      },
+      {
+       "value": "guyana",
+       "text": "Guyana"
+      },
+      {
+       "value": "haiti",
+       "text": "Haïti"
+      },
+      {
+       "value": "honduras",
+       "text": "Honduras"
+      },
+      {
+       "value": "hongKong",
+       "text": "Hong-Kong"
+      },
+      {
+       "value": "hongrie",
+       "text": "Hongrie"
+      },
+      {
+       "value": "ilesFeroe",
+       "text": "Îles Féroé"
+      },
+      {
+       "value": "ilesMineurs",
+       "text": "Îles Mineurs Éloignées Des Etats-unis"
+      },
+      {
+       "value": "inde",
+       "text": "Inde"
+      },
+      {
+       "value": "indonesie",
+       "text": "Indonésie"
+      },
+      {
+       "value": "irak",
+       "text": "Irak"
+      },
+      {
+       "value": "iran",
+       "text": "Iran"
+      },
+      {
+       "value": "irlande",
+       "text": "Irlande"
+      },
+      {
+       "value": "islande",
+       "text": "Islande"
+      },
+      {
+       "value": "israel",
+       "text": "Israël"
+      },
+      {
+       "value": "italie",
+       "text": "Italie"
+      },
+      {
+       "value": "jamaique",
+       "text": "Jamaïque"
+      },
+      {
+       "value": "japon",
+       "text": "Japon"
+      },
+      {
+       "value": "jordanie",
+       "text": "Jordanie"
+      },
+      {
+       "value": "kazakhstan",
+       "text": "Kazakhstan"
+      },
+      {
+       "value": "kenya",
+       "text": "Kenya"
+      },
+      {
+       "value": "kirghizstan",
+       "text": "Kirghizstan"
+      },
+      {
+       "value": "kiribati",
+       "text": "Kiribati"
+      },
+      {
+       "value": "koweit",
+       "text": "Koweit"
+      },
+      {
+       "value": "laos",
+       "text": "Laos"
+      },
+      {
+       "value": "lesotho",
+       "text": "Lesotho"
+      },
+      {
+       "value": "lettonie",
+       "text": "Lettonie"
+      },
+      {
+       "value": "liban",
+       "text": "Liban"
+      },
+      {
+       "value": "liberia",
+       "text": "Liberia"
+      },
+      {
+       "value": "libye",
+       "text": "Libye"
+      },
+      {
+       "value": "liechtenstein",
+       "text": "Liechtenstein"
+      },
+      {
+       "value": "lituanie",
+       "text": "Lituanie"
+      },
+      {
+       "value": "luxembourg",
+       "text": "Luxembourg"
+      },
+      {
+       "value": "macao",
+       "text": "Macao"
+      },
+      {
+       "value": "macedoine",
+       "text": "Macédoine"
+      },
+      {
+       "value": "madagascar",
+       "text": "Madagascar"
+      },
+      {
+       "value": "malaisie",
+       "text": "Malaisie"
+      },
+      {
+       "value": "malawi",
+       "text": "Malawi"
+      },
+      {
+       "value": "maldives",
+       "text": "Maldives"
+      },
+      {
+       "value": "mali",
+       "text": "Mali"
+      },
+      {
+       "value": "malouines",
+       "text": "Îles Malouines"
+      },
+      {
+       "value": "malte",
+       "text": "Malte"
+      },
+      {
+       "value": "marianne",
+       "text": "Îles Marianne Du Nord"
+      },
+      {
+       "value": "maroc",
+       "text": "Maroc"
+      },
+      {
+       "value": "marshall",
+       "text": "Îles Marshall"
+      },
+      {
+       "value": "maurice",
+       "text": "Maurice"
+      },
+      {
+       "value": "mauritanie",
+       "text": "Mauritanie"
+      },
+      {
+       "value": "melilla",
+       "text": "Melilla"
+      },
+      {
+       "value": "mexique",
+       "text": "Mexique"
+      },
+      {
+       "value": "micronesie",
+       "text": "Etats Federes De Micronesie"
+      },
+      {
+       "value": "moldavie",
+       "text": "République De Moldavie"
+      },
+      {
+       "value": "mongolie",
+       "text": "Mongolie"
+      },
+      {
+       "value": "montenegro",
+       "text": "Montenegro"
+      },
+      {
+       "value": "montserrat",
+       "text": "Montserrat"
+      },
+      {
+       "value": "mozambique",
+       "text": "Mozambique"
+      },
+      {
+       "value": "myanmar",
+       "text": "Myanmar"
+      },
+      {
+       "value": "namibie",
+       "text": "Namibie"
+      },
+      {
+       "value": "nauru",
+       "text": "Nauru"
+      },
+      {
+       "value": "nepal",
+       "text": "Népal"
+      },
+      {
+       "value": "nicaragua",
+       "text": "Nicaragua"
+      },
+      {
+       "value": "niger",
+       "text": "Niger"
+      },
+      {
+       "value": "nigeria",
+       "text": "Nigeria"
+      },
+      {
+       "value": "niue",
+       "text": "Niue"
+      },
+      {
+       "value": "norfolk",
+       "text": "Îles Norfolk"
+      },
+      {
+       "value": "norvege",
+       "text": "Norvège"
+      },
+      {
+       "value": "nouvelleCaledonie",
+       "text": "Nouvelle-Calédonie"
+      },
+      {
+       "value": "nouvelleZelande",
+       "text": "Nouvelle-Zélande"
+      },
+      {
+       "value": "oman",
+       "text": "Oman"
+      },
+      {
+       "value": "ouganda",
+       "text": "Ouganda"
+      },
+      {
+       "value": "ouzbekistan",
+       "text": "Ouzbékistan"
+      },
+      {
+       "value": "pakistan",
+       "text": "Pakistan"
+      },
+      {
+       "value": "palaos",
+       "text": "Palaos"
+      },
+      {
+       "value": "panama",
+       "text": "Panama"
+      },
+      {
+       "value": "papouasie",
+       "text": "Papouasie Nouvelle-guinée"
+      },
+      {
+       "value": "paraguay",
+       "text": "Paraguay"
+      },
+      {
+       "value": "paysBas",
+       "text": "Pays-Bas"
+      },
+      {
+       "value": "perou",
+       "text": "Pérou"
+      },
+      {
+       "value": "philippines",
+       "text": "Philippines"
+      },
+      {
+       "value": "pitcairn",
+       "text": "Îles Pitcairn"
+      },
+      {
+       "value": "pologne",
+       "text": "Pologne"
+      },
+      {
+       "value": "polynesieFranc",
+       "text": "Polynésie Française"
+      },
+      {
+       "value": "portugal",
+       "text": "Portugal"
+      },
+      {
+       "value": "qatar",
+       "text": "Qatar"
+      },
+      {
+       "value": "republiqueDemocratiqueCongo",
+       "text": "République Démocratique Du Congo"
+      },
+      {
+       "value": "republiqueDominicaine",
+       "text": "République Dominicaine"
+      },
+      {
+       "value": "republiqueTcheque",
+       "text": "République tchèque"
+      },
+      {
+       "value": "roumanie",
+       "text": "Roumanie"
+      },
+      {
+       "value": "royaumeUni",
+       "text": "Royaume-Uni"
+      },
+      {
+       "value": "russie",
+       "text": "Russie"
+      },
+      {
+       "value": "rwanda",
+       "text": "Rwanda"
+      },
+      {
+       "value": "saintBarthelemy",
+       "text": "Saint-Barthelemy"
+      },
+      {
+       "value": "saintChristophe",
+       "text": "Saint-Christophe-et-nevis"
+      },
+      {
+       "value": "sainteLucie",
+       "text": "Sainte-Lucie"
+      },
+      {
+       "value": "saintHelene",
+       "text": "Saint-Hélène"
+      },
+      {
+       "value": "saintMarin",
+       "text": "Saint-Marin"
+      },
+      {
+       "value": "saintPierre",
+       "text": "Saint-Pierre et Miquelon"
+      },
+      {
+       "value": "saintVincent",
+       "text": "Saint-Vincent et Les Grenadines"
+      },
+      {
+       "value": "salomon",
+       "text": "Îles Salomon"
+      },
+      {
+       "value": "salvador",
+       "text": "Salvador"
+      },
+      {
+       "value": "samoa",
+       "text": "Samoa"
+      },
+      {
+       "value": "samoaAmericaine",
+       "text": "Samoa Americaine"
+      },
+      {
+       "value": "saoTome",
+       "text": "Sao Tomé Et Principe"
+      },
+      {
+       "value": "senegal",
+       "text": "Senegal"
+      },
+      {
+       "value": "serbie",
+       "text": "Serbie"
+      },
+      {
+       "value": "seychelles",
+       "text": "Seychelles"
+      },
+      {
+       "value": "sierraLeone",
+       "text": "Sierra Leone"
+      },
+      {
+       "value": "singapour",
+       "text": "Singapour"
+      },
+      {
+       "value": "slovaquie",
+       "text": "Slovaquie"
+      },
+      {
+       "value": "slovenie",
+       "text": "Slovénie"
+      },
+      {
+       "value": "somalie",
+       "text": "Somalie"
+      },
+      {
+       "value": "soudan",
+       "text": "Soudan"
+      },
+      {
+       "value": "sriLanka",
+       "text": "Sri Lanka"
+      },
+      {
+       "value": "sud soudan",
+       "text": "Sud Soudan"
+      },
+      {
+       "value": "suede",
+       "text": "Suède"
+      },
+      {
+       "value": "suisse",
+       "text": "Suisse"
+      },
+      {
+       "value": "suriname",
+       "text": "Suriname"
+      },
+      {
+       "value": "swaziland",
+       "text": "Swaziland"
+      },
+      {
+       "value": "syrie",
+       "text": "Syrie"
+      },
+      {
+       "value": "tadjikistan",
+       "text": "Tadjikistan"
+      },
+      {
+       "value": "taiwan",
+       "text": "Taiwan"
+      },
+      {
+       "value": "tanzanie",
+       "text": "Tanzanie"
+      },
+      {
+       "value": "tchad",
+       "text": "Tchad"
+      },
+      {
+       "value": "terresAustralesAntarctiques",
+       "text": "Terres Australes et Antarctiques"
+      },
+      {
+       "value": "territoireBritanniqueIndien",
+       "text": "Territoire Britannique de l'océan Indien"
+      },
+      {
+       "value": "thailande",
+       "text": "Thaïlande"
+      },
+      {
+       "value": "timor oriental",
+       "text": "Timor Oriental"
+      },
+      {
+       "value": "togo",
+       "text": "Togo"
+      },
+      {
+       "value": "tokelau",
+       "text": "Tokelau"
+      },
+      {
+       "value": "tonga",
+       "text": "Tonga"
+      },
+      {
+       "value": "trinidad",
+       "text": "Trinidad Et Tobago"
+      },
+      {
+       "value": "tunisie",
+       "text": "Tunisie"
+      },
+      {
+       "value": "turkmenistan",
+       "text": "Turkmenistan"
+      },
+      {
+       "value": "turksCaicos",
+       "text": "Îles Turks Et Caicos"
+      },
+      {
+       "value": "turquie",
+       "text": "Turquie"
+      },
+      {
+       "value": "tuvalu",
+       "text": "Tuvalu"
+      },
+      {
+       "value": "ukraine",
+       "text": "Ukraine"
+      },
+      {
+       "value": "uruguay",
+       "text": "Uruguay"
+      },
+      {
+       "value": "usa",
+       "text": "Etats-unis"
+      },
+      {
+       "value": "vanuatu",
+       "text": "Vanuatu"
+      },
+      {
+       "value": "vatican",
+       "text": "Vatican"
+      },
+      {
+       "value": "venezuela",
+       "text": "Venezuela"
+      },
+      {
+       "value": "viergesBritanniques",
+       "text": "Îles Vierges britanniques"
+      },
+      {
+       "value": "viergesUsa",
+       "text": "Îles Vierges des États-unis"
+      },
+      {
+       "value": "vietNam",
+       "text": "Viet Nam"
+      },
+      {
+       "value": "wallisFutuna",
+       "text": "Wallis et Futuna"
+      },
+      {
+       "value": "yemen",
+       "text": "Yémen"
+      },
+      {
+       "value": "zambie",
+       "text": "Zambie"
+      },
+      {
+       "value": "zimbabwe",
+       "text": "Zimbabwe"
+      }
+     ],
+     "addRowText": {
+      "fr": "Ajouter un Etat "
+     },
+     "removeRowText": {
+      "fr": "Supprimer un Etat "
+     }
+    },
+    {
+     "type": "matrixdynamic",
+     "name": "activiteUnionEuropes",
+     "visibleIf": "{regionActivite} = \"unionEurope\"",
+     "title": {
+      "fr": "Indiquez les Etats membres de l'Union européenne où le groupe / la société exerce son activité"
+     },
+     "isRequired": true,
+     "columns": [
+      {
+       "name": "etatSocieteUnionEurope",
+       "title": {
+        "fr": "Nom de l'Etat membre"
+       },
+       "cellType": "dropdown",
+       "isRequired": true
+      },
+      {
+       "name": "moyenHumainSocieteUnionEurope",
+       "title": {
+        "fr": "La société / le groupe emploie ..."
+       },
+       "cellType": "dropdown",
+       "choices": [
+        {
+         "value": "zero",
+         "text": {
+          "fr": "0 employé"
+         }
+        },
+        {
+         "value": "dix",
+         "text": {
+          "fr": "1-10 employés"
+         }
+        },
+        {
+         "value": "cinquante",
+         "text": {
+          "fr": "1-50"
+         }
+        },
+        {
+         "value": "cinqCent",
+         "text": {
+          "fr": "50-500"
+         }
+        },
+        {
+         "value": "centaine",
+         "text": {
+          "fr": "plus de 500"
+         }
+        }
+       ]
+      },
+      {
+       "name": "moyenMaterielSocieteUnionEurope",
+       "title": {
+        "fr": "Le groupe dispose dans cet Etat"
+       },
+       "cellType": "radiogroup",
+       "choices": [
+        {
+         "value": "succursale",
+         "text": {
+          "fr": "de succursale(s)"
+         }
+        },
+        {
+         "value": "filiale",
+         "text": {
+          "fr": "de filiale(s)"
+         }
+        },
+        {
+         "value": "bureauRepresentation",
+         "text": {
+          "fr": "d'un bureau de liaison / représentation"
+         }
+        }
+       ]
+      }
+     ],
+     "choices": [
+      {
+       "value": "allemagne",
+       "text": "Allemagne"
+      },
+      {
+       "value": "autriche",
+       "text": "Autriche"
+      },
+      {
+       "value": "belgique",
+       "text": "Belgique"
+      },
+      {
+       "value": "bulgarie",
+       "text": "Bulgarie"
+      },
+      {
+       "value": "chypre",
+       "text": "Chypre"
+      },
+      {
+       "value": "croatie",
+       "text": "Croatie"
+      },
+      {
+       "value": "danemark",
+       "text": "Danemark"
+      },
+      {
+       "value": "espagne",
+       "text": "Espagne"
+      },
+      {
+       "value": "estonie",
+       "text": "Estonie"
+      },
+      {
+       "value": "finlande",
+       "text": "Finlande"
+      },
+      {
+       "value": "grece",
+       "text": "Grèce"
+      },
+      {
+       "value": "hongrie",
+       "text": "Hongrie"
+      },
+      {
+       "value": "irlande",
+       "text": "Irlande"
+      },
+      {
+       "value": "italie",
+       "text": "Italie"
+      },
+      {
+       "value": "lettonie",
+       "text": "Lettonie"
+      },
+      {
+       "value": "lituanie",
+       "text": "Lituanie"
+      },
+      {
+       "value": "luxembourg",
+       "text": "Luxembourg"
+      },
+      {
+       "value": "malte",
+       "text": "Malte"
+      },
+      {
+       "value": "paysBas",
+       "text": "Pays-Bas"
+      },
+      {
+       "value": "pologne",
+       "text": "Pologne"
+      },
+      {
+       "value": "portugal",
+       "text": "Portugal"
+      },
+      {
+       "value": "republiqueTcheque",
+       "text": "République tchèque"
+      },
+      {
+       "value": "royaumeUni",
+       "text": " Royaume-Uni"
+      },
+      {
+       "value": "roumanie",
+       "text": "Roumanie"
+      },
+      {
+       "value": "slovaquie",
+       "text": "Slovaquie"
+      },
+      {
+       "value": "slovenie",
+       "text": "Slovénie"
+      },
+      {
+       "value": "suede",
+       "text": "Suède"
+      }
+     ],
+     "addRowText": {
+      "fr": "Ajouter un Etat "
+     },
+     "removeRowText": {
+      "fr": "Supprimer un Etat "
+     }
+    },
+    {
+     "type": "dropdown",
+     "name": "natureActiviteSociete",
+     "title": {
+      "fr": "La société est engagée dans une activité "
+     },
+     "isRequired": true,
+     "hasOther": true,
+     "choices": [
+      {
+       "value": "naf01",
+       "text": "culture et production animale, chasse et services annexes"
+      },
+      {
+       "value": "naf02",
+       "text": "sylviculture et exploitation forestière"
+      },
+      {
+       "value": "naf03",
+       "text": "pêche et aquaculture"
+      },
+      {
+       "value": "naf05",
+       "text": "extraction de houille et de lignite "
+      },
+      {
+       "value": "naf06",
+       "text": "extraction d'hydrocarbures"
+      },
+      {
+       "value": "naf07",
+       "text": "extraction de minerais métalliques"
+      },
+      {
+       "value": "naf08",
+       "text": "industries extractives"
+      },
+      {
+       "value": "naf09",
+       "text": "services de soutien aux industries extractives"
+      },
+      {
+       "value": "naf10",
+       "text": "industries alimentaires"
+      },
+      {
+       "value": "naf11",
+       "text": "fabrication de boissons"
+      },
+      {
+       "value": "naf12",
+       "text": "fabrication de produits à base de tabac"
+      },
+      {
+       "value": "naf13",
+       "text": "fabrication de textiles"
+      },
+      {
+       "value": "naf14",
+       "text": "industrie de l'habillement"
+      },
+      {
+       "value": "naf15",
+       "text": "industrie du cuir et de la chaussure"
+      },
+      {
+       "value": "naf16",
+       "text": "travail du bois et fabrication d'articles en bois et en liège, à l'exception des meubles"
+      },
+      {
+       "value": "naf17",
+       "text": "industrie du papier et du carton"
+      },
+      {
+       "value": "naf18",
+       "text": "imprimerie et reproduction d'enregistrements"
+      },
+      {
+       "value": "naf19",
+       "text": "cokéfaction et raffinage"
+      },
+      {
+       "value": "naf20",
+       "text": "industrie chimique"
+      },
+      {
+       "value": "naf21",
+       "text": "industrie pharmaceutique"
+      },
+      {
+       "value": "naf22",
+       "text": "fabrication de produits en caoutchouc et en plastique"
+      },
+      {
+       "value": "naf23",
+       "text": "fabrication d'autres produits minéraux non métalliques"
+      },
+      {
+       "value": "naf24",
+       "text": "métallurgie"
+      },
+      {
+       "value": "naf25",
+       "text": "fabrication de produits métalliques, à l'exception des machines et des équipements"
+      },
+      {
+       "value": "naf26",
+       "text": "fabrication de produits informatiques, électroniques et optiques"
+      },
+      {
+       "value": "naf27",
+       "text": "fabrication d'équipements électriques"
+      },
+      {
+       "value": "naf28",
+       "text": "fabrication de machines et équipements n.c.a."
+      },
+      {
+       "value": "naf29",
+       "text": "industrie automobile"
+      },
+      {
+       "value": "naf30",
+       "text": "fabrication d'autres matériels de transport"
+      },
+      {
+       "value": "naf31",
+       "text": "fabrication de meubles"
+      },
+      {
+       "value": "naf32",
+       "text": "industries manufacturières"
+      },
+      {
+       "value": "naf33",
+       "text": "réparation et installation de machines et d'équipements"
+      },
+      {
+       "value": "naf34",
+       "text": "production et distribution d'électricité, de gaz, de vapeur et d'air conditionné"
+      },
+      {
+       "value": "naf35",
+       "text": "captage, traitement et distribution d'eau"
+      },
+      {
+       "value": "naf36",
+       "text": "collecte et traitement des eaux usées"
+      },
+      {
+       "value": "naf37",
+       "text": "collecte, traitement et élimination des déchets"
+      },
+      {
+       "value": "naf38",
+       "text": "dépollution et autres services de gestion des déchets"
+      },
+      {
+       "value": "naf40",
+       "text": "construction de bâtiments"
+      },
+      {
+       "value": "naf41",
+       "text": "génie civil"
+      },
+      {
+       "value": "naf42",
+       "text": "travaux de construction spécialisés"
+      },
+      {
+       "value": "naf44",
+       "text": "commerce et réparation d'automobiles et de motocycles"
+      },
+      {
+       "value": "naf45",
+       "text": "commerce de gros, à l'exception des automobiles et des motocycles"
+      },
+      {
+       "value": "naf46",
+       "text": "commerce de détail, à l'exception des automobiles et des motocycles"
+      },
+      {
+       "value": "naf49",
+       "text": "transports terrestres et transport par conduites"
+      },
+      {
+       "value": "naf50",
+       "text": "transports par eau"
+      },
+      {
+       "value": "naf51",
+       "text": "transports aériens"
+      },
+      {
+       "value": "naf52",
+       "text": "entreposage et services auxiliaires des transports"
+      },
+      {
+       "value": "naf53",
+       "text": "activités de poste et de courrier"
+      },
+      {
+       "value": "naf55",
+       "text": "hébergement"
+      },
+      {
+       "value": "naf56",
+       "text": "restauration"
+      },
+      {
+       "value": "naf58",
+       "text": "édition"
+      },
+      {
+       "value": "naf59",
+       "text": "protion de films cinématographiques, de vidéo et de programmes de télévision"
+      },
+      {
+       "value": "naf59bis",
+       "text": "enregistrement sonore et édition musicale"
+      },
+      {
+       "value": "naf60",
+       "text": "programmation et diffusion"
+      },
+      {
+       "value": "naf61",
+       "text": "télécommunications"
+      },
+      {
+       "value": "naf62",
+       "text": "programmation, conseil et autres activités informatiques"
+      },
+      {
+       "value": "naf63",
+       "text": "services d'information"
+      },
+      {
+       "value": "naf64",
+       "text": "activités des services financiers, hors assurance et caisses de retraite"
+      },
+      {
+       "value": "naf65",
+       "text": "assurance"
+      },
+      {
+       "value": "naf66",
+       "text": "activités auxiliaires de services financiers et d'assurance"
+      },
+      {
+       "value": "naf68",
+       "text": "activités immobilières"
+      },
+      {
+       "value": "naf69",
+       "text": "activités juridiques et comptables"
+      },
+      {
+       "value": "naf70",
+       "text": "activités des sièges sociaux"
+      },
+      {
+       "value": "naf70bis",
+       "text": "conseil de gestion"
+      },
+      {
+       "value": "naf71",
+       "text": "activités d'architecture et d'ingénierie"
+      },
+      {
+       "value": "naf71bis",
+       "text": "activités de contrôle et analyses techniques"
+      },
+      {
+       "value": "naf72",
+       "text": "recherche-développement scientifique"
+      },
+      {
+       "value": "naf73",
+       "text": "publicité et études de marché"
+      },
+      {
+       "value": "naf74",
+       "text": "autres activités spécialisées, scientifiques et techniques"
+      },
+      {
+       "value": "naf75",
+       "text": "activités vétérinaires"
+      },
+      {
+       "value": "naf77",
+       "text": "activités de location et location-bail"
+      },
+      {
+       "value": "naf78",
+       "text": "activités liées à l'emploi"
+      },
+      {
+       "value": "naf79",
+       "text": "activités des agences de voyage, voyagistes, services de réservation et activités connexes"
+      },
+      {
+       "value": "naf80",
+       "text": "enquêtes et sécurité"
+      },
+      {
+       "value": "naf81",
+       "text": "services relatifs aux bâtiments et aménagement paysager"
+      },
+      {
+       "value": "naf82",
+       "text": "activités administratives et autres activités de soutien aux entreprises"
+      },
+      {
+       "value": "naf84",
+       "text": "administration publique et défense"
+      },
+      {
+       "value": "naf85",
+       "text": "enseignement"
+      },
+      {
+       "value": "naf86",
+       "text": "activités pour la santé humaine"
+      },
+      {
+       "value": "naf87",
+       "text": "hébergement médico-social et social"
+      },
+      {
+       "value": "naf88",
+       "text": "action sociale sans hébergement"
+      },
+      {
+       "value": "naf90",
+       "text": "activités créatives, artistiques et de spectacle"
+      },
+      {
+       "value": "naf91",
+       "text": "bibliothèques, archives, musées et autres activités culturelles"
+      },
+      {
+       "value": "naf92",
+       "text": "organisation de jeux de hasard et d'argent"
+      },
+      {
+       "value": "naf93",
+       "text": "activités sportives, récréatives et de loisirs"
+      },
+      {
+       "value": "naf94",
+       "text": "activités des organisations associatives"
+      },
+      {
+       "value": "naf95",
+       "text": "réparation d'ordinateurs et de biens personnels et domestiques"
+      },
+      {
+       "value": "naf98",
+       "text": "activités indifférenciées des ménages en tant que producteurs de biens et services pour usage propre"
+      },
+      {
+       "value": "naf99",
+       "text": "activités des organisations et organismes extraterritoriaux "
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "name": "precisionActiviteSociete",
+     "title": {
+      "fr": "Précisez plus en détails la nature de l'activité exercée par la société / le groupe"
+     },
+     "isRequired": true
+    },
+    {
+     "type": "checkbox",
+     "name": "qualiteClientSocietes",
+     "title": {
+      "fr": "Cette activité est exercée au profit "
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "assujetti",
+       "text": {
+        "fr": "d'entreprises (BtoB)"
+       }
+      },
+      {
+       "value": "nonAssujetti",
+       "text": {
+        "fr": "de consommateurs finaux (BtoC)"
+       }
+      }
+     ]
+    },
+    {
+     "type": "checkbox",
+     "name": "lieuEtablissementClientSocietes",
+     "title": {
+      "fr": "Ces clients sont établis / résident"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "france",
+       "text": {
+        "fr": "français"
+       }
+      },
+      {
+       "value": "unionEurope",
+       "text": {
+        "fr": "européens"
+       }
+      },
+      {
+       "value": "horsUnionEurope",
+       "text": {
+        "fr": "internationaux"
+       }
+      }
+     ]
+    }
+   ],
+   "title": {
+    "fr": "Présentation générale de l'activité de la société / du groupe"
+   }
+  },
+  {
+   "name": "activite_france",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "confirmationEtablissementActiviteSociete",
+     "title": {
+      "fr": "En France, l'établissement réalise(ra) une activité similaire/identique de celle pour le groupe / la société indiquée ci-avant "
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "fr": "Oui"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "fr": "Non, l'établissement s'engage dans un secteur d'activité spécifique sur le marché français."
+       }
+      }
+     ]
+    },
+    {
+     "type": "dropdown",
+     "name": "natureActiviteEtablissement",
+     "visibleIf": "{confirmationEtablissementActiviteSociete} = \"false\"",
+     "title": {
+      "fr": "En France, l'établissement est engagée dans une activité "
+     },
+     "isRequired": true,
+     "hasOther": true,
+     "choices": [
+      {
+       "value": "naf01",
+       "text": "culture et production animale, chasse et services annexes"
+      },
+      {
+       "value": "naf02",
+       "text": "sylviculture et exploitation forestière"
+      },
+      {
+       "value": "naf03",
+       "text": "pêche et aquaculture"
+      },
+      {
+       "value": "naf05",
+       "text": "extraction de houille et de lignite "
+      },
+      {
+       "value": "naf06",
+       "text": "extraction d'hydrocarbures"
+      },
+      {
+       "value": "naf07",
+       "text": "extraction de minerais métalliques"
+      },
+      {
+       "value": "naf08",
+       "text": "industries extractives"
+      },
+      {
+       "value": "naf09",
+       "text": "services de soutien aux industries extractives"
+      },
+      {
+       "value": "naf10",
+       "text": "industries alimentaires"
+      },
+      {
+       "value": "naf11",
+       "text": "fabrication de boissons"
+      },
+      {
+       "value": "naf12",
+       "text": "fabrication de produits à base de tabac"
+      },
+      {
+       "value": "naf13",
+       "text": "fabrication de textiles"
+      },
+      {
+       "value": "naf14",
+       "text": "industrie de l'habillement"
+      },
+      {
+       "value": "naf15",
+       "text": "industrie du cuir et de la chaussure"
+      },
+      {
+       "value": "naf16",
+       "text": "travail du bois et fabrication d'articles en bois et en liège, à l'exception des meubles"
+      },
+      {
+       "value": "naf17",
+       "text": "industrie du papier et du carton"
+      },
+      {
+       "value": "naf18",
+       "text": "imprimerie et reproduction d'enregistrements"
+      },
+      {
+       "value": "naf19",
+       "text": "cokéfaction et raffinage"
+      },
+      {
+       "value": "naf20",
+       "text": "industrie chimique"
+      },
+      {
+       "value": "naf21",
+       "text": "industrie pharmaceutique"
+      },
+      {
+       "value": "naf22",
+       "text": "fabrication de produits en caoutchouc et en plastique"
+      },
+      {
+       "value": "naf23",
+       "text": "fabrication d'autres produits minéraux non métalliques"
+      },
+      {
+       "value": "naf24",
+       "text": "métallurgie"
+      },
+      {
+       "value": "naf25",
+       "text": "fabrication de produits métalliques, à l'exception des machines et des équipements"
+      },
+      {
+       "value": "naf26",
+       "text": "fabrication de produits informatiques, électroniques et optiques"
+      },
+      {
+       "value": "naf27",
+       "text": "fabrication d'équipements électriques"
+      },
+      {
+       "value": "naf28",
+       "text": "fabrication de machines et équipements n.c.a."
+      },
+      {
+       "value": "naf29",
+       "text": "industrie automobile"
+      },
+      {
+       "value": "naf30",
+       "text": "fabrication d'autres matériels de transport"
+      },
+      {
+       "value": "naf31",
+       "text": "fabrication de meubles"
+      },
+      {
+       "value": "naf32",
+       "text": "industries manufacturières"
+      },
+      {
+       "value": "naf33",
+       "text": "réparation et installation de machines et d'équipements"
+      },
+      {
+       "value": "naf34",
+       "text": "production et distribution d'électricité, de gaz, de vapeur et d'air conditionné"
+      },
+      {
+       "value": "naf35",
+       "text": "captage, traitement et distribution d'eau"
+      },
+      {
+       "value": "naf36",
+       "text": "collecte et traitement des eaux usées"
+      },
+      {
+       "value": "naf37",
+       "text": "collecte, traitement et élimination des déchets"
+      },
+      {
+       "value": "naf38",
+       "text": "dépollution et autres services de gestion des déchets"
+      },
+      {
+       "value": "naf40",
+       "text": "construction de bâtiments"
+      },
+      {
+       "value": "naf41",
+       "text": "génie civil"
+      },
+      {
+       "value": "naf42",
+       "text": "travaux de construction spécialisés"
+      },
+      {
+       "value": "naf44",
+       "text": "commerce et réparation d'automobiles et de motocycles"
+      },
+      {
+       "value": "naf45",
+       "text": "commerce de gros, à l'exception des automobiles et des motocycles"
+      },
+      {
+       "value": "naf46",
+       "text": "commerce de détail, à l'exception des automobiles et des motocycles"
+      },
+      {
+       "value": "naf49",
+       "text": "transports terrestres et transport par conduites"
+      },
+      {
+       "value": "naf50",
+       "text": "transports par eau"
+      },
+      {
+       "value": "naf51",
+       "text": "transports aériens"
+      },
+      {
+       "value": "naf52",
+       "text": "entreposage et services auxiliaires des transports"
+      },
+      {
+       "value": "naf53",
+       "text": "activités de poste et de courrier"
+      },
+      {
+       "value": "naf55",
+       "text": "hébergement"
+      },
+      {
+       "value": "naf56",
+       "text": "restauration"
+      },
+      {
+       "value": "naf58",
+       "text": "édition"
+      },
+      {
+       "value": "naf59",
+       "text": "protion de films cinématographiques, de vidéo et de programmes de télévision"
+      },
+      {
+       "value": "naf59bis",
+       "text": "enregistrement sonore et édition musicale"
+      },
+      {
+       "value": "naf60",
+       "text": "programmation et diffusion"
+      },
+      {
+       "value": "naf61",
+       "text": "télécommunications"
+      },
+      {
+       "value": "naf62",
+       "text": "programmation, conseil et autres activités informatiques"
+      },
+      {
+       "value": "naf63",
+       "text": "services d'information"
+      },
+      {
+       "value": "naf64",
+       "text": "activités des services financiers, hors assurance et caisses de retraite"
+      },
+      {
+       "value": "naf65",
+       "text": "assurance"
+      },
+      {
+       "value": "naf66",
+       "text": "activités auxiliaires de services financiers et d'assurance"
+      },
+      {
+       "value": "naf68",
+       "text": "activités immobilières"
+      },
+      {
+       "value": "naf69",
+       "text": "activités juridiques et comptables"
+      },
+      {
+       "value": "naf70",
+       "text": "activités des sièges sociaux"
+      },
+      {
+       "value": "naf70bis",
+       "text": "conseil de gestion"
+      },
+      {
+       "value": "naf71",
+       "text": "activités d'architecture et d'ingénierie"
+      },
+      {
+       "value": "naf71bis",
+       "text": "activités de contrôle et analyses techniques"
+      },
+      {
+       "value": "naf72",
+       "text": "recherche-développement scientifique"
+      },
+      {
+       "value": "naf73",
+       "text": "publicité et études de marché"
+      },
+      {
+       "value": "naf74",
+       "text": "autres activités spécialisées, scientifiques et techniques"
+      },
+      {
+       "value": "naf75",
+       "text": "activités vétérinaires"
+      },
+      {
+       "value": "naf77",
+       "text": "activités de location et location-bail"
+      },
+      {
+       "value": "naf78",
+       "text": "activités liées à l'emploi"
+      },
+      {
+       "value": "naf79",
+       "text": "activités des agences de voyage, voyagistes, services de réservation et activités connexes"
+      },
+      {
+       "value": "naf80",
+       "text": "enquêtes et sécurité"
+      },
+      {
+       "value": "naf81",
+       "text": "services relatifs aux bâtiments et aménagement paysager"
+      },
+      {
+       "value": "naf82",
+       "text": "activités administratives et autres activités de soutien aux entreprises"
+      },
+      {
+       "value": "naf84",
+       "text": "administration publique et défense"
+      },
+      {
+       "value": "naf85",
+       "text": "enseignement"
+      },
+      {
+       "value": "naf86",
+       "text": "activités pour la santé humaine"
+      },
+      {
+       "value": "naf87",
+       "text": "hébergement médico-social et social"
+      },
+      {
+       "value": "naf88",
+       "text": "action sociale sans hébergement"
+      },
+      {
+       "value": "naf90",
+       "text": "activités créatives, artistiques et de spectacle"
+      },
+      {
+       "value": "naf91",
+       "text": "bibliothèques, archives, musées et autres activités culturelles"
+      },
+      {
+       "value": "naf92",
+       "text": "organisation de jeux de hasard et d'argent"
+      },
+      {
+       "value": "naf93",
+       "text": "activités sportives, récréatives et de loisirs"
+      },
+      {
+       "value": "naf94",
+       "text": "activités des organisations associatives"
+      },
+      {
+       "value": "naf95",
+       "text": "réparation d'ordinateurs et de biens personnels et domestiques"
+      },
+      {
+       "value": "naf98",
+       "text": "activités indifférenciées des ménages en tant que producteurs de biens et services pour usage propre"
+      },
+      {
+       "value": "naf99",
+       "text": "activités des organisations et organismes extraterritoriaux "
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "name": "precisionActiviteEtablissement",
+     "title": {
+      "fr": "Précisez plus en détails la nature de l'activité exercée par l'établissement"
+     },
+     "isRequired": true
+    }
+   ],
+   "title": {
+    "fr": "Présentation de l'activité en France"
+   }
+  },
+  {
+   "name": "permanence_materiel",
+   "elements": [
+    {
+     "type": "matrixdynamic",
+     "name": "descriptionMoyenMateriels",
+     "title": {
+      "fr": "Pour réaliser son activité en France, la société dispose"
+     },
+     "isRequired": true,
+     "columns": [
+      {
+       "name": "typeMoyenMateriel",
+       "title": {
+        "fr": "Type de structure / présence"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "bureauPropre",
+         "text": " de ses propres bureaux"
+        },
+        {
+         "value": "bureauChezClient",
+         "text": "des bureaux mis à disposition par le(s) client(s)"
+        },
+        {
+         "value": "bureauRep",
+         "text": "un bureau de liaison / de représentation"
+        },
+        {
+         "value": "usine",
+         "text": "une usine"
+        },
+        {
+         "value": "chantier",
+         "text": "un chantier"
+        },
+        {
+         "value": "entrepotStockage",
+         "text": "un entrepôt de stockage"
+        },
+        {
+         "value": "none",
+         "text": {
+          "fr": "aucun (ni site, chantier, bureau)"
+         }
+        }
+       ]
+      },
+      {
+       "name": "localisationMoyenMateriel",
+       "title": {
+        "fr": "Localisation de la structure / présence"
+       },
+       "cellType": "text",
+       "isRequired": true,
+       "visibleIf": "{descriptionMoyenMateriels[0].typeMoyenMateriel} <> \"none\""
+      },
+      {
+       "name": "periodePresenceFrance",
+       "title": {
+        "fr": "Structure / présence depuis"
+       },
+       "isRequired": true,
+       "visibleIf": "{descriptionMoyenMateriels[0].typeMoyenMateriel} <> \"none\""
+      },
+      {
+       "name": "dureePresenceFrance",
+       "title": {
+        "fr": "et pour une durée encore de"
+       },
+       "isRequired": true,
+       "visibleIf": "{descriptionMoyenMateriels[0].typeMoyenMateriel} <> \"none\""
+      }
+     ],
+     "choices": [
+      {
+       "value": "3",
+       "text": " moins de 3 mois"
+      },
+      {
+       "value": "6",
+       "text": {
+        "fr": "moins de 6 mois"
+       }
+      },
+      {
+       "value": "12",
+       "text": {
+        "fr": "1 an"
+       }
+      },
+      {
+       "value": "18",
+       "text": {
+        "fr": "18 mois"
+       }
+      },
+      {
+       "value": "24",
+       "text": {
+        "fr": "au moins 2 ans"
+       }
+      },
+      {
+       "value": "0",
+       "text": {
+        "fr": "non applicable"
+       }
+      }
+     ],
+     "rowCount": 1,
+     "maxRowCount": 4,
+     "addRowText": {
+      "fr": "Ajouter un établissement"
+     }
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationEtablissementCorporateTaxCasSansChangement",
+     "visibleIf": "{confirmationChangementAnte} = \"false\" and {confirmationChangementPost} = \"false\" ",
+     "title": {
+      "fr": "Cette structure qualifie un établissement stable pour les besoins de l'IS"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "fr": "Oui, cet établissement qualifie actuellement un établissement stable en matière d'impôt direct"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "fr": "Non, cet établissement ne qualifie pas un établissement stable en matière d'impôt direct"
+       }
+      }
+     ]
+    }
+   ],
+   "title": {
+    "fr": "Présence en France de la société"
+   }
+  },
+  {
+   "name": "moyen_humain",
+   "elements": [
+    {
+     "type": "checkbox",
+     "name": "typeMoyenHumains",
+     "title": {
+      "fr": "Pour exercer son activité en France, la société dispose sur le plan humain "
+     },
+     "isRequired": true,
+     "hasOther": true,
+     "choices": [
+      {
+       "value": "propreSalarie",
+       "text": {
+        "fr": "de ses propres salariés (embauchés en local)"
+       }
+      },
+      {
+       "value": "salarieDetache",
+       "text": {
+        "fr": "de salariés du siège détachés en France"
+       }
+      },
+      {
+       "value": "salarieGroupeMisADisposition",
+       "text": {
+        "fr": "de salariés d'une société membre du groupe mis à disposition en France"
+       }
+      },
+      {
+       "value": "salarieTiersMisADisposition",
+       "text": {
+        "fr": "de salariés d'une société tierce mis à disposition en France"
+       }
+      },
+      {
+       "value": "agent",
+       "text": {
+        "fr": "de la présence d'un agent en France"
+       }
+      },
+      {
+       "value": "sousTraitant",
+       "text": {
+        "fr": "du personnel d'une société tierce auprès de laquelle elle sous-traite"
+       }
+      },
+      {
+       "value": "none",
+       "text": {
+        "fr": "d'aucun personnel en France"
+       }
+      }
+     ],
+     "noneText": {
+      "fr": "aucune personne n'est présente en France"
+     }
+    },
+    {
+     "type": "text",
+     "name": "nombreStaffTotalSuccursale",
+     "visibleIf": "{typeEtablissement} <> \"chantier\"  and {typeMoyenHumains} <> [\"none\"]",
+     "title": {
+      "fr": "Le nombre d'employés à disposition de l'établissement en France est de "
+     },
+     "isRequired": true,
+     "inputType": "number"
+    },
+    {
+     "type": "text",
+     "name": "nombreStaffTotalChantier",
+     "visibleIf": "{descriptionMoyenMateriels[0].typeMoyenMateriel} = \"chantier\"",
+     "title": {
+      "fr": "Le nombre d'employés travaillant sur le chantier en France est de "
+     },
+     "isRequired": true,
+     "inputType": "number"
+    }
+   ],
+   "title": {
+    "fr": "Description des moyens humains de l'établissement en France"
+   }
+  },
+  {
+   "name": "autonomie",
+   "elements": [
+    {
+     "type": "panel",
+     "name": "organisationEtablissement",
+     "elements": [
+      {
+       "type": "radiogroup",
+       "name": "remunerationEtablissement",
+       "title": {
+        "fr": "Pour ses activités en France, l'établissement"
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "costPlus",
+         "text": {
+          "fr": "est uniquement rémunéré sur la base d'un cost plus / mark-up"
+         }
+        },
+        {
+         "value": "remunerationCostPlusEntrepreneur",
+         "text": {
+          "fr": "est rémunéré sur la base d'un cost plus / mark-up et bénéficie d'une rémunération intéressée au chiffre d'affaires"
+         }
+        },
+        {
+         "value": "remunerationEntrepreneur",
+         "text": {
+          "fr": "est uniquement rémunéré en fonction du chiffre d'affaires qu'il réalise ou permet de réaliser"
+         }
+        },
+        {
+         "value": "noRemunreation",
+         "text": {
+          "fr": "n'est pas rémunéré"
+         }
+        }
+       ]
+      },
+      {
+       "type": "checkbox",
+       "name": "etablissementDetails",
+       "title": {
+        "fr": "En France, l'établissement dispose"
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "compteBancaire",
+         "text": {
+          "fr": "de son propore compte bancaire"
+         }
+        },
+        {
+         "value": "nomCommercia",
+         "text": {
+          "fr": "de son propre nom commercial (différent de celui du siège)"
+         }
+        }
+       ],
+       "hasNone": true
+      },
+      {
+       "type": "radiogroup",
+       "name": "managementSalarieTiersMisADisposition",
+       "visibleIf": "{typeMoyenHumains} contains [\"salarieTiersMisADisposition\"]",
+       "title": {
+        "fr": "Les personnels de la société tierce sont gérés par"
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "societe",
+         "text": {
+          "fr": "le siège / une société du groupe"
+         }
+        },
+        {
+         "value": "etablissement",
+         "text": {
+          "fr": "les managers présents au sein de l'établissement en France"
+         }
+        },
+        {
+         "value": "salarieTiersMisADisposition",
+         "text": {
+          "fr": "le prestataire / la société tierce"
+         }
+        }
+       ]
+      },
+      {
+       "type": "radiogroup",
+       "name": "managementStaffSousTraitant",
+       "visibleIf": "{typeMoyenHumains} contains [\"sousTraitant\"]",
+       "title": {
+        "fr": "L'entité qui gère les personnels mis à disposition par les sous-traitants est"
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "societe",
+         "text": {
+          "fr": "le siège / une société du groupe"
+         }
+        },
+        {
+         "value": "etablissement",
+         "text": {
+          "fr": "les managers embauchés localement au sein de l'établissement en France"
+         }
+        },
+        {
+         "value": "sousTraitant",
+         "text": {
+          "fr": "le prestataire / sous-traitant mettant les personnels à disposition"
+         }
+        }
+       ]
+      }
+     ],
+     "title": {
+      "fr": "Organisation de l'établissement en France"
+     }
+    },
+    {
+     "type": "checkbox",
+     "name": "natureFonctions",
+     "visibleIf": "{typeMoyenHumains} notcontains \"none\"",
+     "title": {
+      "fr": "Parmi les fonctions suivantes, cochez celles exercées par l'établissement en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "support",
+       "text": {
+        "fr": "support administratif (ex. : liaison, comptabilité, juridique, démarches auprès des autorités)"
+       }
+      },
+      {
+       "value": "operationnel",
+       "text": {
+        "fr": "logistique / opérationnelle (ex. : production, façonnage, R&D, étude, etc...)"
+       }
+      },
+      {
+       "value": "vente",
+       "text": {
+        "fr": "ventes (ex. : relation client, négociation, démarchages) "
+       }
+      },
+      {
+       "value": "achat",
+       "text": {
+        "fr": "achats (ex. : relation fournisseurs, négociations, etc...)"
+       }
+      }
+     ],
+     "hasNone": true,
+     "noneText": {
+      "fr": "aucune fonction / prérogative n'est exercée depuis l'établissement en France"
+     }
+    },
+    {
+     "type": "panel",
+     "name": "fonctionSupport",
+     "elements": [
+      {
+       "type": "text",
+       "name": "nombreStaffFonctionSupport",
+       "title": {
+        "fr": "Indiquez le nombre de personnels affectés à la fonction de support administratif"
+       },
+       "isRequired": true,
+       "inputType": "number"
+      },
+      {
+       "type": "checkbox",
+       "name": "staffFonctionSupports",
+       "startWithNewLine": false,
+       "title": {
+        "fr": "L'équipe du support administratif est composée de "
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "autonomie1",
+         "text": {
+          "fr": "directeur de business unit"
+         }
+        },
+        {
+         "value": "autonomie2",
+         "text": {
+          "fr": "directeur administratif et financier"
+         }
+        },
+        {
+         "value": "autonomie3",
+         "text": {
+          "fr": "responsable des ressources humaines"
+         }
+        },
+        {
+         "value": "encadre1",
+         "text": {
+          "fr": "recruteur"
+         }
+        },
+        {
+         "value": "encadre2",
+         "text": {
+          "fr": "juriste / fiscaliste / comptable"
+         }
+        },
+        {
+         "value": "execution",
+         "text": {
+          "fr": "agent administratif / secrétaire"
+         }
+        },
+        "encadre3"
+       ]
+      },
+      {
+       "type": "checkbox",
+       "name": "typeFonctionSupports",
+       "startWithNewLine": false,
+       "title": {
+        "fr": "Parmi les fonctions suivantes, indiquez celles exercées par l'équipe support "
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "195",
+         "text": {
+          "fr": "rédaction des contrats conclus par l'établissement"
+         }
+        },
+        {
+         "value": "350",
+         "text": {
+          "fr": "gestion des salariés / responsable RH de l'établissement"
+         }
+        },
+        {
+         "value": "60",
+         "text": {
+          "fr": "recherche de salariés de l'établissement  sans capacité d'embauche  / fixation de la rémunération"
+         }
+        },
+        {
+         "value": "55",
+         "text": {
+          "fr": "activités de liaison / démarches administratives"
+         }
+        },
+        {
+         "value": "800",
+         "text": {
+          "fr": "gestion financière autonome de l'établissement"
+         }
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{natureFonctions} contains [\"support\"]",
+     "title": {
+      "fr": "Description des activités de support de l'établissement en France"
+     }
+    },
+    {
+     "type": "panel",
+     "name": "fonctionOperationnelle",
+     "elements": [
+      {
+       "type": "text",
+       "name": "nombreStaffFonctionOperationnel",
+       "title": {
+        "fr": "Indiquez le nombre de personnels affectés aux activités opérationnelles"
+       },
+       "isRequired": true,
+       "inputType": "number"
+      },
+      {
+       "type": "checkbox",
+       "name": "staffFonctionOperationnels",
+       "startWithNewLine": false,
+       "title": {
+        "fr": "L'équipe opérationnelle est composée de "
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "autonomie",
+         "text": {
+          "fr": "directeur / responsable de business unit"
+         }
+        },
+        {
+         "value": "autonomiePartielle",
+         "text": {
+          "fr": "ingénieur / cadre"
+         }
+        },
+        {
+         "value": "encadre",
+         "text": {
+          "fr": "agent de maîtrise / professions intermédiaires"
+         }
+        },
+        {
+         "value": "execution1",
+         "text": {
+          "fr": "agents techniques"
+         }
+        },
+        {
+         "value": "execution2",
+         "text": {
+          "fr": "employés / ouvriers"
+         }
+        }
+       ]
+      },
+      {
+       "type": "checkbox",
+       "name": "typeFonctionOperationnels",
+       "startWithNewLine": false,
+       "title": {
+        "fr": "Les opérationnels de l'établissement en France ont la gestion autonome"
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "750",
+         "text": {
+          "fr": "des salariés / employés de l'établissement (fixation rémunération, licenciement, etc..)"
+         }
+        },
+        {
+         "value": "800",
+         "text": {
+          "fr": "économique de l'établissement (e.g., capacité juridique et financière d'acheter / de vendre)"
+         }
+        },
+        {
+         "value": "120",
+         "text": {
+          "fr": "de la réalisation des opérations techniques"
+         }
+        },
+        {
+         "value": "125",
+         "text": {
+          "fr": "de la réalisation du chantier / des travaux de construction "
+         },
+         "visibleIf": "{descriptionMoyenMateriels[0].typeMoyenMateriel} = \"chantier\""
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{natureFonctions} contains [\"operationnel\"]",
+     "title": {
+      "fr": "Description de l'activité opérationnelle de l'établissement en France"
+     }
+    },
+    {
+     "type": "panel",
+     "name": "fonctionVente",
+     "elements": [
+      {
+       "type": "text",
+       "name": "nombreStaffFonctionVente",
+       "title": {
+        "fr": "Indiquez le nombre de personnels affectés à l'activité de vente"
+       },
+       "isRequired": true,
+       "inputType": "number"
+      },
+      {
+       "type": "checkbox",
+       "name": "staffFonctionVentes",
+       "startWithNewLine": false,
+       "title": {
+        "fr": "L'équipe vente est composée de "
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "autonomie",
+         "text": {
+          "fr": "responsable grand compte / \"key account manager\""
+         }
+        },
+        {
+         "value": "encadre",
+         "text": {
+          "fr": "sales manager"
+         }
+        },
+        {
+         "value": "execution",
+         "text": {
+          "fr": "sales representative"
+         }
+        }
+       ]
+      },
+      {
+       "type": "checkbox",
+       "name": "typeFonctionVentes",
+       "startWithNewLine": false,
+       "title": {
+        "fr": "Fonction de l'équipe vente"
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "800",
+         "text": {
+          "fr": "négocier et signer les contrats de ventes sans en référer au siège"
+         }
+        },
+        {
+         "value": "600",
+         "text": {
+          "fr": "négocier et signer en autonomie une partie des contrats de ventes et se référer aux directives du siège (guidelines / grilles tarifaires) pour les autres"
+         }
+        },
+        {
+         "value": "450",
+         "text": {
+          "fr": "négocier et signer l'ensemble des contrats de ventes selon les directives du siège (guidelines / grilles tarifaires)"
+         }
+        },
+        {
+         "value": "75",
+         "text": {
+          "fr": "réalise des opérations de marketing"
+         }
+        },
+        {
+         "value": "60",
+         "text": {
+          "fr": "assurer la représentation / coordination dans les relations de ventes entre client et siège "
+         }
+        },
+        {
+         "value": "210",
+         "text": {
+          "fr": "réalise les ventes au nom et pour le compte (agent transparent)"
+         }
+        },
+        {
+         "value": "350",
+         "text": {
+          "fr": "réalise les ventes en son nom "
+         }
+        },
+        {
+         "value": "200",
+         "text": {
+          "fr": "démarcher des prospects / clients"
+         }
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{natureFonctions} contains [\"vente\"]",
+     "title": {
+      "fr": "Description de l'activité vente de l'établissement en France "
+     }
+    },
+    {
+     "type": "panel",
+     "name": "fonctionAchat",
+     "elements": [
+      {
+       "type": "text",
+       "name": "nombreStaffFonctionAchat",
+       "title": {
+        "fr": "Indiquez le nombre de personnels affectés à l'activité d'achat"
+       },
+       "isRequired": true,
+       "inputType": "number"
+      },
+      {
+       "type": "checkbox",
+       "name": "staffFonctionAchats",
+       "startWithNewLine": false,
+       "title": {
+        "fr": "L'équipe achat est composée de "
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "autonomie",
+         "text": {
+          "fr": "purchase manager"
+         }
+        },
+        {
+         "value": "execution",
+         "text": {
+          "fr": "approvisionneur"
+         }
+        },
+        {
+         "value": "encadre",
+         "text": {
+          "fr": "responsable achat / procurement"
+         }
+        }
+       ]
+      },
+      {
+       "type": "checkbox",
+       "name": "typeFonctionAchats",
+       "startWithNewLine": false,
+       "title": {
+        "fr": "Fonction de l'équipe achat"
+       },
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "750",
+         "text": {
+          "fr": "négocier et signer les contrats de procurement sans en référer au siège"
+         }
+        },
+        {
+         "value": "450",
+         "text": {
+          "fr": "négocier et signer en autonomie une partie des contrats de procurement et se référer aux directives du siège (guidelines / grilles tarifaires) pour les autres"
+         }
+        },
+        {
+         "value": "180",
+         "text": {
+          "fr": "négocier et signer l'ensemble des contrats de procurement selon les directives du siège (guidelines / grilles tarifaires)"
+         }
+        },
+        {
+         "value": "50",
+         "text": {
+          "fr": "assurer la représentation / coordination dans les achats entre les fournisseurs et le siège "
+         }
+        }
+       ]
+      }
+     ],
+     "visibleIf": "{natureFonctions} contains [\"achat\"]",
+     "title": {
+      "fr": "Description de l'activité achat de l'établissement en France "
+     }
+    },
+    {
+     "type": "rating",
+     "name": "ponderationAvocat",
+     "title": {
+      "fr": "Pour la réalisation de ses opérations économiques, l'établissement bénéficie selon vous"
+     },
+     "rateValues": [
+      {
+       "value": "execution",
+       "text": {
+        "fr": "d'aucune autonomie"
+       }
+      },
+      {
+       "value": "encadre",
+       "text": {
+        "fr": "d'une autonomie très réduite"
+       }
+      },
+      {
+       "value": "autonomiePartielle",
+       "text": {
+        "fr": "d'une autonomie partielle"
+       }
+      },
+      {
+       "value": "autonomie",
+       "text": {
+        "fr": "d'une totale autonomie"
+       }
+      }
+     ],
+     "rateMax": 4
+    }
+   ],
+   "title": {
+    "fr": "Description de l'organisation et des fonctions actuelles de l'établissement en France"
+   }
+  },
+  {
+   "name": "relation_etablissement",
+   "elements": [
+    {
+     "type": "checkbox",
+     "name": "selectionNatureOperations",
+     "title": {
+      "fr": "select operation"
+     },
+     "choices": [
+      "prestationDeService",
+      "achatPrestationDeService",
+      "livraisonBien",
+      "acquisitionBien"
+     ]
+    }
+   ],
+   "title": {
+    "fr": "Description des relations économiques de l'établissement"
+   }
+  },
+  {
+   "name": "prestation_output",
+   "elements": [
+    {
+     "type": "matrixdynamic",
+     "name": "descriptionPrestationOutputs",
+     "title": {
+      "fr": "Décrivez ci-après les prestations fournies par l'établissement situé en France"
+     },
+     "isRequired": true,
+     "columns": [
+      {
+       "name": "typePrestationOutput",
+       "title": {
+        "fr": "L'établissement effectue des prestations ..."
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "prestationStockage",
+         "text": "de stockage (conservation et/ou  logistique et/ou surveillance)"
+        },
+        {
+         "value": "prestationConseil",
+         "text": "de conseils"
+        },
+        {
+         "value": "prestationDataInfo",
+         "text": "de traitement de données et fournitures d'information"
+        },
+        {
+         "value": "prestationStaffDisposition",
+         "text": "de mise à disposition de personnel"
+        },
+        {
+         "value": "prestationInstallationAgencement",
+         "text": "d'installation d'agencements"
+        },
+        {
+         "value": "prestationExpertiseBienMeuble",
+         "text": "d'expertises ou de travaux sur des biens meubles corporels"
+        },
+        {
+         "value": "prestationLocationTransport",
+         "text": "de location de moyen de transport"
+        },
+        {
+         "value": "prestationVenteConsommationSurPlace",
+         "text": "de ventes de nourritures à consommer sur place"
+        },
+        {
+         "value": "prestationManif",
+         "text": "de manifestations culturelles, artistiques, éducatives, sportives (droit d'accès)"
+        },
+        {
+         "value": "prestationConf",
+         "text": "de séminaires, conférences de formation"
+        },
+        {
+         "value": "prestationFoire",
+         "text": "d'organisation de foires, salons, congrés"
+        },
+        {
+         "value": "prestationExposantFoire",
+         "text": "de services fournis aux exposants dans les foires, salons et congrès"
+        },
+        {
+         "value": "prestationTransportPassager",
+         "text": "de transport de passagers (aérien, maritime, terrestre)"
+        },
+        {
+         "value": "prestationTransportMarchandiseIntraco",
+         "text": "de transport de marchandises intracommunaitaire"
+        },
+        {
+         "value": "prestationTransportMarchandise",
+         "text": "de transport de marchandises"
+        },
+        {
+         "value": "prestationConvoyage",
+         "text": "de convoyages de moyens de tranports pour les besoins de transports de marchandises"
+        },
+        {
+         "value": "prestationLocationPourTransportBien",
+         "text": "de location de véhicules et de matériels pour les besoins des transports de marchandises"
+        },
+        {
+         "value": "prestationManuelPourTransportBien",
+         "text": "de gardiennage, magasinage, manutention, chargement et déchargement de marchandises"
+        },
+        {
+         "value": "prestationLienImmobilier",
+         "text": "en lien avec un immeuble (travaux, expertise, acte juridique, etc...)"
+        },
+        {
+         "value": "prestationChasseEtPeche",
+         "text": "de cession / concession de droit de chasse ou de pêche"
+        },
+        {
+         "value": "prestationLocationEspace",
+         "text": "de location d'espaces, de garde meuble"
+        },
+        {
+         "value": "prestationArchitecte",
+         "text": "d'architectes, de géomètres, de bureaux d'études relatives aux projets immobiliers"
+        },
+        {
+         "value": "prestationNettoyageImmeuble",
+         "text": "de nettoyage d'immeubles"
+        },
+        {
+         "value": "prestationGardiennageImmeuble",
+         "text": "de gardiennage d'immeubles"
+        },
+        {
+         "value": "prestationReparationImmeuble",
+         "text": "de réparation et entretien d'immeubles"
+        },
+        {
+         "value": "prestationEvaluationReparationImmeuble",
+         "text": "d'évaluation dommages et indemnités destinées à réparer les dommages causés à un immeuble"
+        },
+        {
+         "value": "prestationLocationImmobiliere",
+         "text": "de locations immobilières (hébergement, bureaux, hôtellerie, para-hôtellerie, camping)"
+        },
+        {
+         "value": "prestationIntermediaire",
+         "text": "d'intermédiaires (à l'achat / à la vente de biens ou de services, quelle que soit la nature du bien ou du services)"
+        },
+        {
+         "value": "prestationElectronique",
+         "text": "fournis par voie électronique (hébergement de sites informatiques, fournitures de logiciels)"
+        },
+        {
+         "value": "prestationLicence",
+         "text": "cession et concession de droits d'auteurs, de brevets, de droits de licences, de marques"
+        },
+        {
+         "value": "prestationPublicite",
+         "text": "de publicité"
+        },
+        {
+         "value": "prestationLocationBien",
+         "text": "de locations de biens meubles corporels autres que des moyens de transport"
+        },
+        {
+         "value": "prestationRadioTele",
+         "text": "de radiodiffusion et de télévision"
+        },
+        {
+         "value": "prestationComplexe",
+         "text": "complexes, c'est-à-dire un ensemble comprenant plusieurs services indissociables"
+        },
+        {
+         "value": "prestationTourOperator",
+         "text": "d'agences de voyages)"
+        },
+        {
+         "value": "presationLocationBienMeuble",
+         "text": "de locations de biens meubles (hors moyen de transports)"
+        },
+        {
+         "value": "prestationBancaire",
+         "text": "opérations bancaires, financières et d'assurance ou de réassurance, à l'exception de la location de coffres-forts"
+        }
+       ]
+      },
+      {
+       "name": "qualiteClient",
+       "title": {
+        "fr": "... au profit  .."
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "clientAssujetti",
+         "text": {
+          "fr": "de clients assujettis à la TVA"
+         }
+        },
+        {
+         "value": "clientNonAssujetti",
+         "text": {
+          "fr": "de clients non assujettis à la TVA"
+         }
+        },
+        {
+         "value": "siege",
+         "text": {
+          "fr": "du siège"
+         }
+        }
+       ]
+      },
+      {
+       "name": "lieuEtablissementClients",
+       "title": {
+        "fr": " établis .."
+       },
+       "cellType": "checkbox",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "france",
+         "text": {
+          "fr": "en France"
+         }
+        },
+        {
+         "value": "unionEurope",
+         "text": {
+          "fr": "dans une Etat membre de l'Union européenne"
+         }
+        },
+        {
+         "value": "horsUnionEurope",
+         "text": {
+          "fr": "hors de l'Union européenne"
+         }
+        }
+       ]
+      },
+      {
+       "name": "confirmationClientEtablissementFrVatId",
+       "title": {
+        "fr": "et immaticulés à la TVA en France"
+       },
+       "cellType": "boolean",
+       "isRequired": true
+      }
+     ],
+     "choices": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "type": "matrixdynamic",
+     "name": "descriptionPrestationOutputLocationMoyenTransports",
+     "visibleIf": "{descriptionPrestationOutputs[0].typePrestationOutput} contains \"prestationLocationTransport\"",
+     "title": {
+      "fr": "La location de moyen de transport "
+     },
+     "isRequired": true,
+     "columns": [
+      {
+       "name": "typeMoyenTransport",
+       "title": {
+        "fr": "porte sur"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "vehicule",
+         "text": {
+          "fr": "un véhicule terrestre à moteur"
+         }
+        },
+        {
+         "value": "navire",
+         "text": {
+          "fr": "un navire"
+         }
+        },
+        {
+         "value": "aeronef",
+         "text": {
+          "fr": "un aéronef"
+         }
+        }
+       ]
+      },
+      {
+       "name": "lieuDebutLocation",
+       "title": {
+        "fr": "moyen mis à disposition"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "france",
+         "text": {
+          "fr": "en France"
+         }
+        },
+        {
+         "value": "unionEurope",
+         "text": {
+          "fr": "dans un Etat membre de l'Union européenne"
+         }
+        },
+        {
+         "value": "horsUnionEurope",
+         "text": {
+          "fr": "hors de l'Union européenne"
+         }
+        }
+       ]
+      },
+      {
+       "name": "dureeLocationMoyenTransport",
+       "title": {
+        "fr": "pour une durée de "
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "30",
+         "text": {
+          "fr": "moins de 30 jours"
+         }
+        },
+        {
+         "value": "90",
+         "text": {
+          "fr": "entre 30 et 90 jours"
+         }
+        },
+        {
+         "value": "longueDuree",
+         "text": {
+          "fr": "plus de 90 jours"
+         }
+        }
+       ]
+      },
+      {
+       "name": "qualiteClientLocation",
+       "title": {
+        "fr": "au profit de clients"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "clientAssujetti",
+         "text": {
+          "fr": "assujettis à la TVA"
+         }
+        },
+        {
+         "value": "clientNonAssujetti",
+         "text": {
+          "fr": "non assujettis à la TVA"
+         }
+        }
+       ]
+      }
+     ],
+     "choices": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "rowCount": 1
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationOutputImmobiliereTvaFr",
+     "visibleIf": "{descriptionPrestationOutputs[0].typePrestationOutput} anyof [\"prestationLienImmobilier\" , \"prestationChasseEtPeche\" , \"prestationLocationEspace\" , \"prestationArchitecte\" , \"prestationNettoyageImmeuble\" , \"prestationGardiennageImmeuble\" , \"prestationReparationImmeuble\" , \"prestationEvaluationReparationImmeuble\" , \"prestationLocationImmobiliere\"]",
+     "title": {
+      "fr": "Les prestations de  i.e., en lien avec un immeuble, sont réalisées au profit d'un immeuble situé en France"
+     },
+     "isRequired": true,
+     "commentText": {
+      "fr": "Pour rappel, les prestations immobilière sont taxables en France dès lors que le bien immeuble auquel elles se rapportent est situé en France"
+     },
+     "choices": [
+      {
+       "value": "true",
+       "text": " Oui, la prestation est bien taxable à la TVA en France"
+      },
+      {
+       "value": "false",
+       "text": "Non, la TVA française ne devrait pas être applicable"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationVenteConsommationSurPlaceTvaFr",
+     "visibleIf": "{descriptionPrestationOutputs[0].typePrestationOutput} contains \"prestationVenteConsommationSurPlace\"",
+     "title": {
+      "fr": "Les ventes à consommer sur place sont bien effectuées en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "default": " Oui, la prestation est bien taxable à la TVA en France",
+        "fr": " Oui, la prestation est exécutée en France"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "default": "Non, la TVA française ne devrait pas être applicable",
+        "fr": " Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationOutputTransportIntraco",
+     "visibleIf": "{descriptionPrestationOutputs[0].typePrestationOutput} contains \"prestationTransportMarchandiseIntraco\"",
+     "title": {
+      "fr": "Le lieu de départ du transport intracommunautaire de marchandise se situe en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "default": "Oui, la prestation est bien taxable à la TVA en France",
+        "fr": " Oui"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "default": "Non, la TVA française ne devrait pas être applicable",
+        "fr": " Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationOutputTransportPassagerTvaFr",
+     "visibleIf": "{descriptionPrestationOutputs[0].typePrestationOutput} = \"prestationTransportPassager\"",
+     "title": {
+      "fr": "Une partie des distances du transport des passagers est parcourue en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "default": " Oui, la prestation est bien taxable à la TVA en France",
+        "fr": " Oui"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "default": "Non, la TVA française ne devrait pas être applicable",
+        "fr": " Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationOutputManifCultSportTvaFr",
+     "visibleIf": "{descriptionPrestationOutputs[0].typePrestationOutput} anyof [\"prestationManif\",\"prestationConf\",\"prestationFoire\",\"prestationExposantFoire\"]",
+     "title": {
+      "fr": "La prestation ayant pour objet des activités culturelles, artistiques, sportives, scientifiques, éducatives, de divertissement ou similaires, telles que les foires et les expositions, y compris les prestations de services des organisateurs de telles activités, ainsi que les prestations de services accessoires à ces activités "
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "default": "Oui, la prestation est bien taxable à la TVA en France",
+        "fr": "a lieu en France"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "default": "Non, la TVA française ne devrait pas être applicable",
+        "fr": "n'a pas lieu en France"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationOutputExpertiseBienMeubleCorporelTvaFr",
+     "visibleIf": "{descriptionPrestationOutputs[0].typePrestationOutput} contains \"prestationExpertiseBienMeuble\"",
+     "title": {
+      "fr": "La prestation d'expertise sur des biens meubles corporels est exécutés en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "default": "Oui, la prestation est bien taxable à la TVA en France",
+        "fr": " Oui"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "default": "Non, la TVA française ne devrait pas être applicable",
+        "fr": "Non, la prestation n'est pas exécutée en France"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationOutputIntermediaireTvaFr",
+     "visibleIf": "{descriptionPrestationOutputs[0].typePrestationOutput} contains \"prestationIntermediaire\"",
+     "title": {
+      "fr": "La prestation d'intermédiaire porte sur une prestation elle-même taxable à la TVA en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "default": "Oui, la prestation est bien taxable à la TVA en France",
+        "fr": "Oui"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "default": "Non, la TVA française ne devrait pas être applicable",
+        "fr": " Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationOutputTomsTvaFr",
+     "visibleIf": "{descriptionPrestationOutputs[0].typePrestationOutput} contains \"prestationTourOperator\"",
+     "title": {
+      "fr": "L'agence de voyages réalise une prestation de services unique lorsqu'elle agit, en son propre nom, à l'égard du client et utilise, pour la réalisation du voyage, des livraisons de biens et des prestations de services d'autres assujettis"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "default": " Oui, la prestation est bien taxable à la TVA en France",
+        "fr": " Oui"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "default": "Non, la TVA française ne devrait pas être applicable",
+        "fr": " Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationOutputRadioTeleTvaFr",
+     "visibleIf": "{descriptionPrestationOutputs[0].typePrestationOutput} contains \"prestationRadioTele\"",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": "Oui, la prestation est bien taxable à la TVA en France"
+      },
+      {
+       "value": "false",
+       "text": "Non, la TVA française ne devrait pas être applicable"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{descriptionOperations[0].natureOperation} contains \"ventePrestationDeService\" ||  {selectionNatureOperations} contains \"prestationDeService\"",
+   "title": {
+    "fr": "Description des prestations de services fournies par l'établissement"
+   }
+  },
+  {
+   "name": "prestation_input",
+   "elements": [
+    {
+     "type": "matrixdynamic",
+     "name": "descriptionPrestationInputs",
+     "title": {
+      "fr": "Décrivez ci-après les prestations rendues au proft de l'établissement situé en France"
+     },
+     "isRequired": true,
+     "columns": [
+      {
+       "name": "typePrestationInput",
+       "title": {
+        "fr": "L'établissement bénéficie de prestations de ..."
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "prestationStockage",
+         "text": "de stockage (conservation et/ou  logistique et/ou surveillance)"
+        },
+        {
+         "value": "prestationConseil",
+         "text": "de conseils"
+        },
+        {
+         "value": "prestationData",
+         "text": "de traitement de données et fournitures d'information"
+        },
+        {
+         "value": "prestationStaffDisposition",
+         "text": "de mise à disposition de personnel"
+        },
+        {
+         "value": "prestationInstallationAgencement",
+         "text": "d'installation d'agencements"
+        },
+        {
+         "value": "prestationExpertiseBienMeuble",
+         "text": "d'expertises ou de travaux sur des biens meubles corporels"
+        },
+        {
+         "value": "prestationLocationTransport",
+         "text": "de location de moyen de transport"
+        },
+        {
+         "value": "prestationAchatConsommationSurPlace",
+         "text": "de ventes de nourritures à consommer sur place"
+        },
+        {
+         "value": "prestationManif",
+         "text": "de manifestations culturelles, artistiques, éducatives, sportives (droit d'accès)"
+        },
+        {
+         "value": "prestationConf",
+         "text": "de séminaires, conférences de formation"
+        },
+        {
+         "value": "prestationFoire",
+         "text": "d'organisation de foires, salons, congrés"
+        },
+        {
+         "value": "prestationExposantFoire",
+         "text": "de services fournis aux exposants dans les foires, salons et congrès"
+        },
+        {
+         "value": "prestationTransportPassager",
+         "text": "de transport de passagers (aérien, maritime, terrestre)"
+        },
+        {
+         "value": "prestationTransportMarchandise",
+         "text": "de transport de marchandises"
+        },
+        {
+         "value": "prestationConvoyage",
+         "text": "de convoyages de moyens de tranports pour les besoins de transports de marchandises"
+        },
+        {
+         "value": "prestationLocationPourTransportBien",
+         "text": "de location de véhicules et de matériels pour les besoins des transports de marchandises"
+        },
+        {
+         "value": "prestationManuelPourTransportBien",
+         "text": "de gardiennage, magasinage, manutention, chargement et déchargement de marchandises"
+        },
+        {
+         "value": "prestationLienImmobilier",
+         "text": "en lien avec un immeuble (travaux, expertise, acte juridique, etc...)"
+        },
+        {
+         "value": "prestationChasseEtPeche",
+         "text": "de cession / concession de droit de chasse ou de pêche"
+        },
+        {
+         "value": "prestationLocationEspace",
+         "text": "de location d'espaces, de garde meuble"
+        },
+        {
+         "value": "prestationArchitecte",
+         "text": "d'architectes, de géomètres, de bureaux d'études relatives aux projets immobiliers"
+        },
+        {
+         "value": "prestationNettoyageImmeuble",
+         "text": "de nettoyage d'immeubles"
+        },
+        {
+         "value": "prestationGardiennageImmeuble",
+         "text": "de gardiennage d'immeubles"
+        },
+        {
+         "value": "prestationReparationImmeuble",
+         "text": "de réparation et entretien d'immeubles"
+        },
+        {
+         "value": "prestationEvaluationReparationImmeuble",
+         "text": "d'évaluation dommages et indemnités destinées à réparer les dommages causés à un immeuble"
+        },
+        {
+         "value": "prestationLocationImmobiliere",
+         "text": "de locations immobilières (hébergement, bureaux, hôtellerie, para-hôtellerie, camping)"
+        },
+        {
+         "value": "prestationIntermediaire",
+         "text": "d'intermédiaires (à l'achat / à la vente de biens ou de services, quelle que soit la nature du bien ou du services)"
+        },
+        {
+         "value": "prestationElectronique",
+         "text": "fournis par voie électronique (hébergement de sites informatiques, fournitures de logiciels)"
+        },
+        {
+         "value": "prestationLicence",
+         "text": "cession et concession de droits d'auteurs, de brevets, de droits de licences, de marques"
+        },
+        {
+         "value": "prestationPublicite",
+         "text": "de publicité"
+        },
+        {
+         "value": "prestationLocationBien",
+         "text": "de locations de biens meubles corporels autres que des moyens de transport"
+        },
+        {
+         "value": "prestationRadioTele",
+         "text": "de radiodiffusion et de télévision"
+        },
+        {
+         "value": "prestationComplexe",
+         "text": "complexes, c'est-à-dire un ensemble comprenant plusieurs services indissociables"
+        },
+        {
+         "value": "prestationTourOperator",
+         "text": "d'agences de voyages"
+        }
+       ]
+      },
+      {
+       "name": "typePrestataire",
+       "title": {
+        "fr": "fournis par"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "siege",
+         "text": {
+          "fr": "le siège"
+         }
+        },
+        {
+         "value": "tiers",
+         "text": {
+          "fr": "des sociétés tierces (membre ou non du groupe)"
+         }
+        },
+        {
+         "value": "siegePlusTiers",
+         "text": {
+          "fr": "le siège et les sociétés tierces"
+         }
+        }
+       ]
+      },
+      {
+       "name": "lieuEtablissementPrestataire",
+       "title": {
+        "fr": "fournis par des prestataires établis .."
+       },
+       "cellType": "radiogroup",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "france",
+         "text": {
+          "fr": "en France"
+         }
+        },
+        {
+         "value": "unionEurope",
+         "text": {
+          "fr": "dans une Etat membre de l'Union européenne"
+         }
+        },
+        {
+         "value": "horsUnionEurope",
+         "text": {
+          "fr": "hors de l'Union européenne"
+         }
+        }
+       ]
+      }
+     ],
+     "choices": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "descriptionPrestationInputLocationMoyenTransports",
+     "visibleIf": "{descriptionPrestationInputs[0].typePrestationInput} contains \"prestationLocationTransport\"",
+     "title": {
+      "fr": "location_moyen_transport"
+     },
+     "isRequired": true,
+     "choices": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationInputImmobiliereTvaFr",
+     "visibleIf": "{descriptionPrestationInputs[0].typePrestationInput} anyof [\"prestationLienImmobilier\" , \"prestationChasseEtPeche\" , \"prestationLocationEspace\" , \"prestationArchitecte\" , \"prestationNettoyageImmeuble\" , \"prestationGardiennageImmeuble\" , \"prestationReparationImmeuble\" , \"prestationEvaluationReparationImmeuble\" , \"prestationLocationImmobiliere\"]",
+     "title": {
+      "fr": "Les prestations de  i.e., en lien avec un immeuble, sont réalisées au profit d'un immeuble situé en France"
+     },
+     "isRequired": true,
+     "commentText": {
+      "fr": "Pour rappel, les prestations immobilière sont taxables en France dès lors que le bien immeuble auquel elles se rapportent est situé en France"
+     },
+     "choices": [
+      {
+       "value": "true",
+       "text": " Oui, la prestation est bien taxable à la TVA en France"
+      },
+      {
+       "value": "false",
+       "text": "Non, la TVA française ne devrait pas être applicable"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationAchatConsommationSurPlaceTvaFr",
+     "visibleIf": "{descriptionPrestationInputs[0].typePrestationInput} contains \"prestationAchatConsommationSurPlace\"",
+     "title": {
+      "fr": "Les ventes à consommer sur place sont bien effectuées en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "default": " Oui, la prestation est bien taxable à la TVA en France",
+        "fr": " Oui, la prestation est exécutée en France"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "default": "Non, la TVA française ne devrait pas être applicable",
+        "fr": " Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationInputTransportIntraco",
+     "visibleIf": "{descriptionPrestationInputs[0].typePrestationInput} contains \"prestationTransportMarchandiseIntraco\"",
+     "title": {
+      "fr": "Le lieu de départ du transport intracommunautaire de marchandise se situe en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": " Oui, la prestation est bien taxable à la TVA en France"
+      },
+      {
+       "value": "false",
+       "text": "Non, la TVA française ne devrait pas être applicable"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationInputTransportPassagerTvaFr",
+     "visibleIf": "{descriptionPrestationInputs[0].typePrestationInput} = \"prestationTransportPassager\"",
+     "title": {
+      "fr": "Une partie des distances du transport des passagers est parcourue en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": " Oui, la prestation est bien taxable à la TVA en France"
+      },
+      {
+       "value": "false",
+       "text": "Non, la TVA française ne devrait pas être applicable"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationInputManifCultSportTvaFr",
+     "visibleIf": "{descriptionPrestationInputs[0].typePrestationInput} anyof [\"prestationManif\",\"prestationConf\",\"prestationFoire\",\"prestationExposantFoire\"]",
+     "title": {
+      "fr": "La prestation ayant pour objet des activités culturelles, artistiques, sportives, scientifiques, éducatives, de divertissement ou similaires, telles que les foires et les expositions, y compris les prestations de services des organisateurs de telles activités, ainsi que les prestations de services accessoires à ces activités "
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": " Oui, la prestation est bien taxable à la TVA en France"
+      },
+      {
+       "value": "false",
+       "text": "Non, la TVA française ne devrait pas être applicable"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationInputExpertiseBienMeubleCorporelTvaFr",
+     "visibleIf": "{descriptionPrestationInputs[0].typePrestationInput} contains \"prestationExpertiseBienMeuble\"",
+     "title": {
+      "fr": "La prestation d'expertise sur des biens meubles corporels est exécutés en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": " Oui, la prestation est bien taxable à la TVA en France"
+      },
+      {
+       "value": "false",
+       "text": "Non, la TVA française ne devrait pas être applicable"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationInputIntermediaireTvaFr",
+     "visibleIf": "{descriptionPrestationInputs[0].typePrestationInput} contains \"prestationIntermediaire\"",
+     "title": {
+      "fr": "La prestation d'intermédiaire porte sur une prestation elle-même taxable à la TVA en France"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "default": "Oui, la prestation est bien taxable à la TVA en France",
+        "fr": "Oui"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "default": "Non, la TVA française ne devrait pas être applicable",
+        "fr": " Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationInputTomsTvaFr",
+     "visibleIf": "{descriptionPrestationInputs[0].typePrestationInput} contains \"prestationTourOperator\"",
+     "title": {
+      "fr": "L'agence de voyages réalise une prestation de services unique lorsqu'elle agit, en son propre nom, à l'égard du client et utilise, pour la réalisation du voyage, des livraisons de biens et des prestations de services d'autres assujettis"
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": " Oui, la prestation est bien taxable à la TVA en France"
+      },
+      {
+       "value": "false",
+       "text": "Non, la TVA française ne devrait pas être applicable"
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationInputRadioTeleTvaFr",
+     "visibleIf": "{descriptionPrestationInputs[0].typePrestationInput} contains \"prestationRadioTele\"",
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": " Oui, la prestation est bien taxable à la TVA en France"
+      },
+      {
+       "value": "false",
+       "text": "Non, la TVA française ne devrait pas être applicable"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{descriptionOperations[0].natureOperation} contains \"achatPrestationDeService\" ||  {selectionNatureOperations} contains \"achatPrestationDeService\"",
+   "title": {
+    "fr": "Description des prestations de services reçues par l'établissement"
+   }
+  },
+  {
+   "name": "livraison_bien",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "confirmationLivraisonEntrepot",
+     "title": {
+      "fr": "Des biens sont livrés (livraisons domestiques, livraisons intracommunautaires, exportations) sous régime douanier communautaire ou sous entrepôt fiscal  "
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "fr": "Oui, des livraisons sont réalisées sous l'un des régime suspensif de TVA (article 277 A du CGI)"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "fr": "Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "matrixdynamic",
+     "name": "descriptionLivraisonBiens",
+     "visibleIf": "{descriptionLivraisonBiens[0].expeditionLivraison} = \"france\"&& and {descriptionLivraisonBiens[0].destinationLivraison} = \"unionEurope\" && and {descriptionLivraisonBiens[0].qualiteClientLivraison} = \"clientAssujetti\"",
+     "title": {
+      "fr": "Décrivez chaque livraison ou transfert assimilé à des livraisons de biens"
+     },
+     "isRequired": true,
+     "columns": [
+      {
+       "name": "expeditionLivraison",
+       "title": {
+        "fr": "Les biens sont livrés / transportés depuis ..."
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "france",
+         "text": "la France"
+        },
+        {
+         "value": "stockConsignation",
+         "text": "depuis le stock en consignation de la société situé en France où ils ont été placés (par un vendeur non établi en France) il y a plus de 3 mois"
+        },
+        {
+         "value": "allemagne",
+         "text": "l'Allemagne"
+        },
+        {
+         "value": "autriche",
+         "text": "l'Autriche"
+        },
+        {
+         "value": "belgique",
+         "text": "la Belgique"
+        },
+        {
+         "value": "bulgarie",
+         "text": "la Bulgarie"
+        },
+        {
+         "value": "chypre",
+         "text": "Chypre"
+        },
+        {
+         "value": "croatie",
+         "text": "la Croatie"
+        },
+        {
+         "value": "danemark",
+         "text": "le Danemark"
+        },
+        {
+         "value": "espagne",
+         "text": "l'Espagne"
+        },
+        {
+         "value": "estonie",
+         "text": "l'Estonie"
+        },
+        {
+         "value": "finlande",
+         "text": "la Finlande"
+        },
+        {
+         "value": "grece",
+         "text": "la Grèce"
+        },
+        {
+         "value": "hongrie",
+         "text": "la Hongrie"
+        },
+        {
+         "value": "irlande",
+         "text": "l'Irlande"
+        },
+        {
+         "value": "italie",
+         "text": "l'Italie"
+        },
+        {
+         "value": "lettonie",
+         "text": "la Lettonie"
+        },
+        {
+         "value": "lituanie",
+         "text": "la Lituanie"
+        },
+        {
+         "value": "luxembourg",
+         "text": "le Luxemburg"
+        },
+        {
+         "value": "malte",
+         "text": "Malte"
+        },
+        {
+         "value": "paysBas",
+         "text": "les Pays-Bas"
+        },
+        {
+         "value": "pologne",
+         "text": "la Pologne"
+        },
+        {
+         "value": "portugal",
+         "text": "le Portugal"
+        },
+        {
+         "value": "republiqueTcheque",
+         "text": "la République Tchèque"
+        },
+        {
+         "value": "roumanie",
+         "text": "la Roumanie"
+        },
+        {
+         "value": "slovaquie",
+         "text": "la Slovaquie"
+        },
+        {
+         "value": "slovenie",
+         "text": "la Slovénie"
+        },
+        {
+         "value": "suede",
+         "text": "la Suède"
+        },
+        {
+         "value": "horsUnionEurope",
+         "text": "un Etat ou territoire non membre de l'Union européenne"
+        }
+       ]
+      },
+      {
+       "name": "expediteur",
+       "title": {
+        "fr": "par"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "expediteurVendeur",
+         "text": " le vendeur (ou pour son compte)"
+        },
+        {
+         "value": "expediteurAcquereurFrance",
+         "text": "l'acquéreur établi en France (ou pour son compte)"
+        },
+        {
+         "value": "expediteurAcquereurHorsFrance",
+         "text": "l'acquéreur établi hors de France (ou pour son compte)"
+        }
+       ]
+      },
+      {
+       "name": "destinationLivraison",
+       "title": {
+        "fr": "et sont livrés ..."
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "france",
+         "text": "en France"
+        },
+        {
+         "value": "installationMontage",
+         "text": {
+          "fr": "en France pour y être installés / montés par le vendeur ou pour son compte"
+         }
+        },
+        {
+         "value": "stockConsignation",
+         "text": {
+          "fr": "dans un stock en consignation situé dans un autre Etat membre de l'Union Européenne avant d'être vendu au client"
+         }
+        },
+        {
+         "value": "allemagne",
+         "text": "en Allemagne"
+        },
+        {
+         "value": "autriche",
+         "text": "en Autriche"
+        },
+        {
+         "value": "belgique",
+         "text": "en Belgique"
+        },
+        {
+         "value": "bulgarie",
+         "text": "en Bulgarie"
+        },
+        {
+         "value": "chypre",
+         "text": "à Chypre"
+        },
+        {
+         "value": "croatie",
+         "text": "en Croatie"
+        },
+        {
+         "value": "danemark",
+         "text": "au Danemark"
+        },
+        {
+         "value": "espagne",
+         "text": "en Espagne"
+        },
+        {
+         "value": "estonie",
+         "text": "en Estonie"
+        },
+        {
+         "value": "finlande",
+         "text": "en Finlande"
+        },
+        {
+         "value": "grece",
+         "text": "en Grèce"
+        },
+        {
+         "value": "hongrie",
+         "text": "en Hongrie"
+        },
+        {
+         "value": "irlande",
+         "text": "en Irlande"
+        },
+        {
+         "value": "italie",
+         "text": "en Italie"
+        },
+        {
+         "value": "lettonie",
+         "text": "en Lettonie"
+        },
+        {
+         "value": "lituanie",
+         "text": "en Lituanie"
+        },
+        {
+         "value": "luxembourg",
+         "text": "au Luxemburg"
+        },
+        {
+         "value": "malte",
+         "text": "à Malte"
+        },
+        {
+         "value": "paysBas",
+         "text": "aux Pays-Bas"
+        },
+        {
+         "value": "pologne",
+         "text": "en Pologne"
+        },
+        {
+         "value": "portugal",
+         "text": "au Portugal"
+        },
+        {
+         "value": "republiqueTcheque",
+         "text": "en République Tchèque"
+        },
+        {
+         "value": "roumanie",
+         "text": "en Roumanie"
+        },
+        {
+         "value": "slovaquie",
+         "text": "en Slovaquie"
+        },
+        {
+         "value": "slovenie",
+         "text": "en Slovénie"
+        },
+        {
+         "value": "suede",
+         "text": "en Suède"
+        },
+        {
+         "value": "horsUnionEurope",
+         "text": "dans un Etat/territoire non membre de l'Union européenne"
+        }
+       ]
+      },
+      {
+       "name": "timingTransfertProprieteLivraison",
+       "title": {
+        "fr": "Le transfert de propriété des biens"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "visibleIf": "{descriptionLivraisonBien[0].lieuTransfertPropriete} = \"transfertMiddle\"",
+       "choices": [
+        {
+         "value": "transfertExpedition",
+         "text": {
+          "fr": "se produit au lieu de départ des biens"
+         }
+        },
+        {
+         "value": "transfertDestination",
+         "text": {
+          "fr": "se produit au lieu d'arrivée des biens"
+         }
+        },
+        {
+         "value": "none",
+         "text": {
+          "fr": "ne se produit pas i.e., la société ne cède pas les biens (transfert de stocks)"
+         }
+        }
+       ]
+      },
+      {
+       "name": "qualiteClientLivraison",
+       "title": {
+        "fr": "au profit de clients"
+       },
+       "cellType": "radiogroup",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "clientAssujetti",
+         "text": {
+          "fr": "clients assujettis à la TVA (BtoB)"
+         }
+        },
+        {
+         "value": "personneMoraleNonAssujettie",
+         "text": {
+          "fr": "une personne morale non assujettie"
+         }
+        },
+        {
+         "value": "clientAssujettiFranchiseTVA",
+         "text": {
+          "fr": "clients assujettis bénéficiant d'un quota d'acquisition en franchise de TVA (article 275 du CGI)"
+         }
+        },
+        {
+         "value": "clientNonAssujetti",
+         "text": {
+          "fr": "clients non assujettis à la TVA (BtoC)"
+         }
+        },
+        {
+         "value": "none",
+         "text": {
+          "fr": "non applicable (transfert à soi-même)"
+         }
+        }
+       ]
+      },
+      {
+       "name": "turnoverLivraison",
+       "title": {
+        "fr": "pour une valeur annuelle"
+       },
+       "cellType": "text",
+       "isRequired": true,
+       "inputType": "number"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{descriptionOperations[0].natureOperation} contains \"livraisonBien\" || {selectionNatureOperations} contains \"livraisonBien\"",
+   "title": {
+    "fr": "Description des livraisons de biens (ou assimilés)"
+   }
+  },
+  {
+   "name": "acquisition_bien",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "confirmationAcquisitionEntrepot",
+     "title": {
+      "fr": "Des biens sont acquis (acquisitions domestiques, acquisitions intracommunautaires, importations) sous régime douanier communautaire ou sous entrepôt fiscal  "
+     },
+     "isRequired": true,
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "fr": "Oui, des acquisitions sont réalisées sous l'un des régime suspensif de TVA (article 277 A du CGI)"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "fr": "Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "matrixdynamic",
+     "name": "descriptionAcquisitionBiens",
+     "visibleIf": "{descriptionAcquisitionBiens[0].expeditionAcquisition} = \"france\"&& and {descriptionAcquisitionBiens[0].destinationAcquisition} = \"unionEurope\" && and {descriptionAcquisitionBiens[0].qualiteClientAcquisition} = \"clientAssujetti\"",
+     "title": {
+      "fr": "Décrivez chaque acquisition ou transfert assimilé à des acquisitions de biens réalisées hors régime suspensif (article 277 A du CGI)"
+     },
+     "isRequired": true,
+     "columns": [
+      {
+       "name": "expeditionAcquisition",
+       "title": {
+        "fr": "Les biens sont expédiés depuis ..."
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "stockConsignation",
+         "text": "depuis le stock en consignation de la société situé en France où ils ont été placés (par un vendeur non établi en France) il y a plus de 3 mois"
+        },
+        {
+         "value": "france",
+         "text": "la France"
+        },
+        {
+         "value": "allemagne",
+         "text": "l'Allemagne"
+        },
+        {
+         "value": "autriche",
+         "text": "l'Autriche"
+        },
+        {
+         "value": "belgique",
+         "text": "la Belgique"
+        },
+        {
+         "value": "bulgarie",
+         "text": "la Bulgarie"
+        },
+        {
+         "value": "chypre",
+         "text": "Chypre"
+        },
+        {
+         "value": "croatie",
+         "text": "la Croatie"
+        },
+        {
+         "value": "danemark",
+         "text": "le Danemark"
+        },
+        {
+         "value": "espagne",
+         "text": "l'Espagne"
+        },
+        {
+         "value": "estonie",
+         "text": "l'Estonie"
+        },
+        {
+         "value": "finlande",
+         "text": "la Finlande"
+        },
+        {
+         "value": "grece",
+         "text": "la Grèce"
+        },
+        {
+         "value": "hongrie",
+         "text": "la Hongrie"
+        },
+        {
+         "value": "irlande",
+         "text": "l'Irlande"
+        },
+        {
+         "value": "italie",
+         "text": "l'Italie"
+        },
+        {
+         "value": "lettonie",
+         "text": "la Lettonie"
+        },
+        {
+         "value": "lituanie",
+         "text": "la Lituanie"
+        },
+        {
+         "value": "luxembourg",
+         "text": "le Luxemburg"
+        },
+        {
+         "value": "malte",
+         "text": "Malte"
+        },
+        {
+         "value": "paysBas",
+         "text": "les Pays-Bas"
+        },
+        {
+         "value": "pologne",
+         "text": "la Pologne"
+        },
+        {
+         "value": "portugal",
+         "text": "le Portugal"
+        },
+        {
+         "value": "republiqueTcheque",
+         "text": "la République Tchèque"
+        },
+        {
+         "value": "roumanie",
+         "text": "la Roumanie"
+        },
+        {
+         "value": "slovaquie",
+         "text": "la Slovaquie"
+        },
+        {
+         "value": "slovenie",
+         "text": "la Slovénie"
+        },
+        {
+         "value": "suede",
+         "text": "la Suède"
+        },
+        {
+         "value": "horsUnionEurope",
+         "text": "un Etat ou territoire non membre de l'Union européenne"
+        }
+       ]
+      },
+      {
+       "name": "destinationAcquisition",
+       "title": {
+        "fr": "et sont destinés à ..."
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "france",
+         "text": "être directement livrés chez la société en France"
+        },
+        {
+         "value": "clientAssujetti",
+         "text": {
+          "default": "être livrés en France directement chez le client de la société assujetti à la TVA",
+          "fr": "être livrés en France directement ou dans les 3 mois chez le client de la société assujetti à la TVA"
+         }
+        },
+        {
+         "value": "clientNonAssujetti",
+         "text": "être livrés en France directement chez le client consommateur final"
+        },
+        {
+         "value": "personneMoraleNonAssujettie",
+         "text": "être livrés en France directement chez le client personne morale non assujettie"
+        },
+        {
+         "value": "unionEurope",
+         "text": {
+          "fr": "reexpédiés dans un autre Etat membre de l'Union européenne après leur introduction en France"
+         }
+        },
+        {
+         "value": "horsUnionEurope",
+         "text": {
+          "fr": "reexpédiés dans un Etat/territoire non membre de l'Union européenne après leur introduction en France"
+         }
+        },
+        {
+         "value": "stockConsignation",
+         "text": {
+          "fr": "être placés (par le vendeur non établi en France) dans un stock en consignation de la société pour moins de 3 mois, avant d'être acquis par la société"
+         }
+        },
+        {
+         "value": "introductionTemporaireTravaux",
+         "text": {
+          "fr": "faire l'objet de travaux avant d'être réexpédiés"
+         }
+        },
+        {
+         "value": "montageInstallation",
+         "text": {
+          "fr": "être montés ou installés (par l'assujetti non établi en France)"
+         }
+        },
+        {
+         "value": "onBoard",
+         "text": {
+          "fr": "faire l'objet de livraisons à bord de moyens de transport"
+         }
+        },
+        {
+         "value": "acquisitionAdmissionTemporaire",
+         "text": {
+          "fr": "être utilisés temporairement (24 mois) en France pour les besoins de prestations de services effectuées par l'assujetti ou dans des conditions qui lui ouvriraient droit, s'il était importé, au bénéfice de l'admission temporaire en exonération totale de droits"
+         }
+        }
+       ]
+      },
+      {
+       "name": "timingTransfertProprieteAcquisition",
+       "title": {
+        "fr": "Le transfert de propriété des biens"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "visibleIf": "{descriptionAcquisitionBien[0].lieuTransfertPropriete} = \"transfertMiddle\"",
+       "choices": [
+        {
+         "value": "transfertExpedition",
+         "text": {
+          "fr": "se produit au lieu de départ des biens"
+         }
+        },
+        {
+         "value": "transfertDestination",
+         "text": {
+          "fr": "se produit au lieu d'arrivée des biens"
+         }
+        },
+        {
+         "value": "none",
+         "text": {
+          "fr": "ne se produit pas i.e., la société ne cède pas les biens (transfert de stocks)"
+         }
+        }
+       ]
+      },
+      {
+       "name": "turnoverAcquisition",
+       "title": {
+        "fr": "pour une valeur annuelle"
+       },
+       "cellType": "text",
+       "isRequired": true,
+       "inputType": "number"
+      },
+      {
+       "name": "importatateur",
+       "title": {
+        "fr": "Le vendeur est désigné comme importateur des biens"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "importateurVendeur",
+         "text": {
+          "fr": "Oui, c'est le vendeur qui est mentionné comme importateur sur le D.A.U"
+         }
+        },
+        {
+         "value": "importateurAcquereur",
+         "text": {
+          "fr": "Non, c'est l'acquéreur qui est mentionné comme importateur sur le D.A.U."
+         }
+        }
+       ]
+      }
+     ],
+     "addRowText": {
+      "fr": "Supprimer cette opération"
+     },
+     "removeRowText": {
+      "fr": "Ajouter une acquisition"
+     }
+    }
+   ],
+   "visibleIf": "{descriptionOperations[0].natureOperation} contains \"acquisitionBien\" || {selectionNatureOperations} contains \"acquisitionBien\"",
+   "title": {
+    "fr": "Description des acquisitions de biens (ou assimilés)"
+   }
+  },
+  {
+   "name": "operation_entrepot",
+   "elements": [
+    {
+     "type": "html",
+     "name": "precisionFluxEntrepot",
+     "html": {
+      "fr": "<p>Pour la description des opérations sous entrepôt; il est considéré que : </p>\n<ul>\n<li>les livraisons sont faites départ France ;</li>\n<li> les acquisitions sont faites à destination de France</li>\n\n</ul>"
+     }
+    },
+    {
+     "type": "matrixdynamic",
+     "name": "descriptionOperationEntrepots",
+     "title": {
+      "fr": "Déscription des opérations en entrepôt fiscal / douanier (article 277-A du code général des impôts)"
+     },
+     "description": {
+      "fr": "Décrivez ci-après les livraisons (pour l'introduction, la sortie ou sous le régime d'entrepôt fiscal / douanier communautaire) réalisées par l'assujetti"
+     },
+     "isRequired": true,
+     "columns": [
+      {
+       "name": "typeOperationRegime",
+       "title": {
+        "fr": "Nature de l'opération"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "livraisonDomestique",
+         "text": "une livraison domestique"
+        },
+        {
+         "value": "livraisonIntracommunautaire",
+         "text": "une livraison intracommunautaire"
+        },
+        {
+         "value": "exportation",
+         "text": "une exportation"
+        },
+        {
+         "value": "acquisitionDomestique",
+         "text": "une acquisition domestique"
+        },
+        {
+         "value": "acquisitionIntracommunautaire",
+         "text": "une acquisition intracommunautaire"
+        },
+        {
+         "value": "importation",
+         "text": "une importation"
+        },
+        {
+         "value": "prestationEntrepot",
+         "text": "une prestation de services"
+        }
+       ]
+      },
+      {
+       "name": "relationOperationRegime",
+       "title": {
+        "fr": "Opération à destination / au profit de : "
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "fournisseurFrance",
+         "text": "d'un fournisseur domestique"
+        },
+        {
+         "value": "fournisseurUnionEurope",
+         "text": "d'un fournisseur communautaire"
+        },
+        {
+         "value": "fournisseurHorsUnionEurope",
+         "text": "d'un fournisseur non communautaire"
+        },
+        {
+         "value": "clientFrance",
+         "text": "d'un client domestique"
+        },
+        {
+         "value": "clientUnionEurope",
+         "text": "d'un client communautaire"
+        },
+        {
+         "value": "clientHorsUnionEurope",
+         "text": "d'un client non communautaire"
+        }
+       ]
+      },
+      {
+       "name": "timingOperationRegime",
+       "title": {
+        "fr": "L'opération est réalisée"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "introductionRegime",
+         "text": "à l'introduction du régime / de l'entrepôt"
+        },
+        {
+         "value": "sousRegime",
+         "text": "sous le régime / l'entrepôt"
+        },
+        {
+         "value": "sortieRegime",
+         "text": "à la sortie ou entraînant la sortie du régime / de l'entrepôt"
+        }
+       ]
+      },
+      {
+       "name": "typeRegimeSuspensif",
+       "title": {
+        "fr": "Régime suspensif appliqué"
+       },
+       "isRequired": true
+      }
+     ],
+     "choices": [
+      {
+       "value": "conduiteDouane",
+       "text": "régime dounanier communautaire de conduite en douane"
+      },
+      {
+       "value": "magasinEtDepotTemporaire",
+       "text": "régime dounanier communautaire de magasins et aires de dépôt temporaire"
+      },
+      {
+       "value": "entrepotImportation",
+       "text": "régime dounanier communautaire d'entrepôt d'importation"
+      },
+      {
+       "value": "entrepotExportation",
+       "text": "régime dounanier communautaire d'entrepôt d'exportation"
+      },
+      {
+       "value": "perfectionnementActif",
+       "text": "régime dounanier communautaire de perfectionnement actif"
+      },
+      {
+       "value": "admissionTemporaire",
+       "text": "régime dounanier communautaire d'admission temporaire"
+      },
+      {
+       "value": "transitExterne",
+       "text": "régime dounanier communautaire de transit externe"
+      },
+      {
+       "value": "rfsexportation",
+       "text": "régime fiscal suspensif d'exportation"
+      },
+      {
+       "value": "rfsImportation",
+       "text": "régime fiscal suspensif d'exportation"
+      },
+      {
+       "value": "entrepotStockage",
+       "text": "régime de l'entrepôt fiscal de stockage"
+      },
+      {
+       "value": "entrepotFabrication",
+       "text": "régime de l'entrepôt fiscal de fabrication"
+      }
+     ]
+    }
+   ],
+   "visibleIf": "{confirmationLivraisonEntrepot} = true or {confirmationAcquisitionEntrepot} = true",
+   "title": {
+    "fr": "Description des opérations sous régime suspensifs de TVA"
+   }
+  },
+  {
+   "name": "evolution_etablissement",
+   "elements": [
+    {
+     "type": "radiogroup",
+     "name": "confirmationChangementAnte",
+     "title": {
+      "fr": "Depuis sa présence en France, cette structure a connu une évolution  (variation du nombre de personnes présentes en France / élargissement des responsabilités des personnes / établissement dans des locaux / acquisition d'immobilisations, etc...)"
+     },
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "fr": "Oui, des changements sont récemment intervenus"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "fr": "Non, aucun changement n'est intervenu"
+       }
+      }
+     ]
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationChangementPost",
+     "title": {
+      "fr": "Cette structure va prochainement connaître une évolution (variation du nombre de personnes présentes en France / élargissement des responsabilités des personnes / établissement dans des locaux / acquisition d'immobilisations, etc...)"
+     },
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "fr": "Oui,  des changements vont prochainement intervenir"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "fr": "Non, aucun changement n'est à prévoir"
+       }
+      }
+     ]
+    }
+   ],
+   "title": {
+    "fr": "Evolution passée et à venir de l'établissement"
+   }
+  },
+  {
+   "name": "information_destinataire",
+   "elements": [
+    {
+     "type": "dropdown",
+     "name": "langueConsultation",
+     "title": {
+      "fr": "Je dois rédiger ma consultation"
+     },
+     "choices": [
+      {
+       "value": "english",
+       "text": {
+        "fr": "en anglais"
+       }
+      },
+      {
+       "value": "french",
+       "text": {
+        "fr": "en français"
+       }
+      }
+     ]
+    },
+    {
+     "type": "text",
+     "name": "objetConsultation",
+     "title": {
+      "fr": "Indiquez ci-après l'objet de la consultation (ex. : Nom du Client - TVA - Cession de l'immeuble Place Pompidou)"
+     }
+    },
+    {
+     "type": "radiogroup",
+     "name": "confirmationExec",
+     "title": {
+      "fr": "Je souhaite que la consultation comporte une synthèse / executive summary"
+     },
+     "choices": [
+      {
+       "value": "true",
+       "text": {
+        "fr": "Oui"
+       }
+      },
+      {
+       "value": "false",
+       "text": {
+        "fr": "Non"
+       }
+      }
+     ]
+    },
+    {
+     "type": "matrixdynamic",
+     "name": "destinataireConsultations",
+     "title": {
+      "fr": "Information sur le client / destinataire de la consultation"
+     },
+     "isRequired": true,
+     "columns": [
+      {
+       "name": "titre",
+       "title": {
+        "fr": "Formule de salutation"
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "hello",
+         "text": {
+          "fr": "Bonjour"
+         }
+        },
+        {
+         "value": "helloMrs",
+         "text": {
+          "fr": "Bonjour Madame"
+         }
+        },
+        {
+         "value": "helloSir",
+         "text": {
+          "fr": "Bonjour Monsieur"
+         }
+        },
+        {
+         "value": "dearMrs",
+         "text": {
+          "fr": "Chère Madame"
+         }
+        },
+        {
+         "value": "dearSir",
+         "text": {
+          "fr": "Cher Monsieur"
+         }
+        },
+        {
+         "value": "dearLastNameFemale",
+         "text": {
+          "fr": "Chère + prénom"
+         }
+        },
+        {
+         "value": "dearLastNameMale",
+         "text": {
+          "fr": "Cher +prénom"
+         }
+        },
+        {
+         "value": "lawyerFemale",
+         "text": {
+          "fr": "Chère Confrère"
+         }
+        },
+        {
+         "value": "lawyerMale",
+         "text": {
+          "fr": "Cher Confrère"
+         }
+        }
+       ]
+      },
+      {
+       "name": "firstName",
+       "title": {
+        "fr": "Prénom"
+       },
+       "cellType": "text",
+       "isRequired": true
+      },
+      {
+       "name": "lastName",
+       "title": {
+        "fr": "Nom"
+       },
+       "cellType": "text",
+       "isRequired": true
+      },
+      {
+       "name": "emailAddress",
+       "title": {
+        "fr": "Adresse électronique"
+       },
+       "cellType": "text",
+       "isRequired": true,
+       "validators": [
+        {
+         "type": "email"
+        }
+       ],
+       "inputType": "email"
+      }
+     ],
+     "choices": [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     "rowCount": 1,
+     "addRowText": {
+      "fr": "Ajouter un destinataire"
+     },
+     "removeRowText": {
+      "fr": "Supprimer un destinataire"
+     }
+    },
+    {
+     "type": "multipletext",
+     "name": "informationCompanie",
+     "title": {
+      "fr": "Information sur le client / la société cliente"
+     },
+     "items": [
+      {
+       "name": "clientName",
+       "isRequired": true,
+       "title": {
+        "fr": "Nom du client / de la société cliente"
+       }
+      },
+      {
+       "name": "clientAdresse",
+       "isRequired": true,
+       "title": {
+        "fr": "Adresse"
+       }
+      },
+      {
+       "name": "clientZipCode",
+       "isRequired": true,
+       "title": "Code postal"
+      },
+      {
+       "name": "clientVille",
+       "isRequired": true,
+       "title": "Ville"
+      },
+      {
+       "name": "clientPays",
+       "title": "Pays"
+      }
+     ]
+    }
+   ],
+   "title": {
+    "fr": "Formalisation de la consultation"
+   }
+  },
+  {
+   "name": "gathering_data_query",
+   "elements": [
+    {
+     "type": "multipletext",
+     "name": "tagsConsultation1",
+     "title": {
+      "fr": "Indiquez ci-après problématique fiscale en 5 mots-clés / tags (ex. : tva / établissement stable / chantier /  capacité / employeur)"
+     },
+     "items": [
+      {
+       "name": "tag1",
+       "title": {
+        "fr": "Tag 1"
+       }
+      },
+      {
+       "name": "tag2",
+       "title": {
+        "fr": "Tag 2"
+       }
+      },
+      {
+       "name": "tag3",
+       "title": "Tag 3"
+      },
+      {
+       "name": "tag4",
+       "title": "Tag 4"
+      },
+      {
+       "name": "tag5",
+       "title": "Tag 5"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "showQuestionNumbers": "off",
+ "showProgressBar": "bottom",
+ "pagePrevText": "Précédente",
+ "pageNextText": "Suivante"
+}

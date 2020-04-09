@@ -1,0 +1,101 @@
+{
+  "nomSociete": "This is it",
+  "lieuEtablissementSiege": "france",
+  "confirmationSiegeStatutaireHfr": "true",
+  "confirmationSiegeDecisionPlaceHfr": "true",
+  "confirmationSiegeFrVatId": "true",
+  "regionActivite": "horsUnionEurope",
+  "activiteMondes": [
+      {
+          "etatMondeActiviteSociete": "algerie",
+          "moyenHumainSocieteMonde": "dix",
+          "moyenMaterielSocieteMonde": "chantier"
+      },
+      {
+          "etatMondeActiviteSociete": "allemagne",
+          "moyenHumainSocieteMonde": "cinquanteToCinqCent",
+          "moyenMaterielSocieteMonde": "chantier"
+      }
+  ],
+  "natureActiviteSociete": "naf10",
+  "precisionActiviteSociete": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliter enim explicari, quod quaeritur, non potest. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Hanc ergo intuens debet institutum illud quasi signum absolvere. Certe non potest. Unum nescio, quo modo possit, si luxuriosus sit, finitas cupiditates habere. Quid me istud rogas? Duo Reges: constructio interrete.",
+  "qualiteClientSocietes": [
+      "assujetti"
+  ],
+  "lieuEtablissementClientSocietes": [
+      "france"
+  ],
+  "confirmationEtablissementActiviteSociete": "true",
+  "precisionActiviteEtablissement": "lol",
+  "descriptionMoyenMateriels": [
+      {
+          "typeMoyenMateriel": "bureauRep",
+          "localisationMoyenMateriel": "Paris",
+          "periodePresenceFrance": "6",
+          "dureePresenceFrance": "12"
+      }
+  ],
+  "typeMoyenHumains": [
+      "salarieDetache",
+      "salarieTiersMisADisposition"
+  ],
+  "nombreStaffTotalSuccursale": 12,
+  "remunerationEtablissement": "remunerationCostPlusEntrepreneur",
+  "etablissementDetails": [
+      "compteBancaire"
+  ],
+  "managementSalarieTiersMisADisposition": "societe",
+  "natureFonctions": [
+      "support"
+  ],
+  "nombreStaffFonctionSupport": 1,
+  "staffFonctionSupports": [
+      "autonomie2",
+      "encadre1"
+  ],
+  "typeFonctionSupports": [
+      "350",
+      "60"
+  ],
+  "ponderationAvocat": "encadre",
+  "selectionNatureOperations": [
+      "livraisonBien"
+  ],
+  "confirmationLivraisonEntrepot": "false",
+  "descriptionLivraisonBiens": [
+      {
+          "expeditionLivraison": "bulgarie",
+          "expediteur": "expediteurAcquereurHorsFrance",
+          "destinationLivraison": "belgique",
+          "qualiteClientLivraison": "personneMoraleNonAssujettie",
+          "turnoverLivraison": 2000
+      }
+  ],
+  "confirmationChangementAnte": "false",
+  "confirmationChangementPost": "false",
+  "langueConsultation": "english",
+  "objetConsultation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  "confirmationExec": "false",
+  "destinataireConsultations": [
+      {
+          "titre": "helloSir",
+          "firstName": "Sebastien",
+          "lastName": "VIAN",
+          "emailAddress": "sebastien.vian@gmail.com"
+      }
+  ],
+  "informationCompanie": {
+      "clientName": "Societe",
+      "clientAdresse": "23 rue du caires",
+      "clientZipCode": "65 reu des petites entourloupes",
+      "clientVille": "Paris",
+      "clientPays": "France"
+  },
+  "tagsConsultation1": {
+      "tag1": "qdq",
+      "tag2": "qdq",
+      "tag3": "qdq",
+      "tag4": "qd",
+      "tag5": "qsd"
+  }
+}
