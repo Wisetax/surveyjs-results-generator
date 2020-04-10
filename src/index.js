@@ -68,34 +68,37 @@ new Vue({
     generate: function(event) {
       this.state.loading = true;
       
-      const dataAsJavascript= JSON.parse(JSON.stringify(this.state.survey.data))
-      if (!this.state.constrained) {
-        this.state.constraints = {...dataAsJavascript};
-        this.state.constrained = true;
-      }
-      
-      const possibleResults = []
-      for(let i=0; i < this.state.numberCase; i++) {
-        this.state.survey.pages[0].elements.forEach((element) => handleElement(element))
-        const data = JSON.parse(JSON.stringify(this.state.survey.data, null, 2));
-
-        if (i < this.state.numberCase - 1) {
-          this.state.survey.clear();
-          this.state.survey.data = this.state.constraints;
-        }
-
-        possibleResults.push(data);
-      }
-
-      console.log(possibleResults);
-
-      downloadJSONfile(possibleResults);
-      copyToClipboard(JSON.stringify(possibleResults, null, 2));
       setTimeout(() => {
-        alert('Copied to clipboard');
-      }, 1000)
+        const dataAsJavascript= JSON.parse(JSON.stringify(this.state.survey.data))
+        if (!this.state.constrained) {
+          this.state.constraints = {...dataAsJavascript};
+          this.state.constrained = true;
+        }
+        
+        const possibleResults = []
+        for(let i=0; i < this.state.numberCase; i++) {
+          this.state.survey.pages[0].elements.forEach((element) => handleElement(element))
+          const data = JSON.parse(JSON.stringify(this.state.survey.data, null, 2));
+  
+          if (i < this.state.numberCase - 1) {
+            this.state.survey.clear();
+            this.state.survey.data = this.state.constraints;
+          }
+  
+          possibleResults.push(data);
+        }
+  
+        console.log(possibleResults);
+  
+        downloadJSONfile(possibleResults);
+        copyToClipboard(JSON.stringify(possibleResults, null, 2));
+        setTimeout(() => {
+          alert('Copied to clipboard');
+        }, 1000)
+  
+        this.state.loading = false;
 
-      this.state.loading = false;
+      }, 0)
     }
   }
 })
