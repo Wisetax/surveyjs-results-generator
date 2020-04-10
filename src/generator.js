@@ -77,7 +77,7 @@ function textGenerator({type, name, title, isRequired, inputType}) {
   if (inputType == 'number')
     result[name] = Math.floor(Math.random() * 100);
   else
-    result[name] = generateText();
+    result[name] = generateText(name);
   
   return result;
 }
@@ -164,7 +164,7 @@ function ratingGenerator({type, rateValues, name, rateMax}) {
  */
 function multipleTextGenerator({type, name, items}) {
   const tags = items.reduce((acc, item) => {
-    return {...acc, ...{ [item.name]: generateText()}}
+    return {...acc, ...{ [item.name]: generateText(item.name)}}
   }, {})
 
   return {
@@ -204,8 +204,8 @@ function matrixDynamicGenerator({type, name, columns, choices}) {
   }
 }
 
-function generateText() {
-  return "Generated Text";
+function generateText(name='') {
+  return `Generated ${name}`;
 }
 
 /**

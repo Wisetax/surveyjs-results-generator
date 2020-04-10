@@ -93,7 +93,7 @@ new Vue({
         downloadJSONfile(possibleResults);
         copyToClipboard(JSON.stringify(possibleResults, null, 2));
         setTimeout(() => {
-          alert('Copied to clipboard');
+          alert('Possible Results Copied to clipboard');
         }, 1000)
   
         this.state.loading = false;
