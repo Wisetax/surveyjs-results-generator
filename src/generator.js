@@ -16,7 +16,8 @@ function handleField(field, results={}) {
   if (results.hasOwnProperty(field.name))
     return {};
 
-
+  if (type === 'boolean')
+    return booleanGenerator(field);
 
   if (type === 'text')
     return textGenerator(field);
@@ -61,6 +62,19 @@ function generateResponse(survey) {
   });
 
   return results;
+}
+
+/**
+ * Generate Response for boolean type
+ * @param  {String} {type
+ * @param  {String} name
+ * @param  {String} labelTrue
+ * @param  {String} labelTrue}
+ */
+function booleanGenerator({type, name, labelTrue, labelFalse}) {
+  return {
+    [name]: Math.random() > 0.5 ? true : false,
+  }
 }
 
 /**

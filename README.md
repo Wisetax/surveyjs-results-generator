@@ -3,6 +3,34 @@
 
 Describe surveyjs type of fields
 
+## Boolean
+type: `boolean`
+
+* Survey
+```json
+ {
+  "type": "boolean",
+  "name": "confirmationContingentAchatFranchise",
+  "title": {
+      "fr": "La société (en sa qualité d'acquéreur) bénéficie en France d'un contingent d'achat en franchise (article 275 du code général des impôts)"
+  },
+  "isRequired": true,
+  "labelTrue": {
+      "default": "Yes",
+      "fr": "Oui"
+  },
+  "labelFalse": {
+      "default": "No",
+      "fr": "Non"
+  }
+},
+```
+
+* Result
+```json
+{"confirmationContingentAchatFranchise": false}
+```
+
 ## Text
 type: `text`
 
