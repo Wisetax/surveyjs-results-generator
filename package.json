@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "survey-vue": "^1.5.19",
-    "surveyjs": "^2.0.4",
     "vue": "^2.6.11"
   }
 }
