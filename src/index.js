@@ -45,7 +45,9 @@ new Vue({
   },
   methods: {
     generateForm: function(event) {
-      const survey = new Survey.Model(surveyOnSamePage(JSON.parse(this.json)));
+      const survey = new Survey.Model(JSON.parse(this.json));
+      survey.isSinglePage = true;
+      
       this.state.survey = survey;
       this.state.loaded = true;
     },
