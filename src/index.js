@@ -1,5 +1,21 @@
 import {handleField} from './generator'
 
+
+function matrixColumnHasValue(params) {
+  if(!params || params.length !== 3) return false;
+  var arr = params[0];
+  var colName = params[1];
+  var value = params[2];
+  var el;
+  if(!arr || !Array.isArray(arr)) return false;
+  for(var i = 0; i <arr.length; i ++) {
+    el = arr[i];
+    if(!!el && el[colName] == value) return true;
+  }
+  return false;
+}
+Survey.FunctionFactory.Instance.register("matrixColumnHasValue", matrixColumnHasValue);
+
 function surveyOnSamePage(survey) {
   const uniqPage = {...survey.pages[0]};
   uniqPage.elements = [];
