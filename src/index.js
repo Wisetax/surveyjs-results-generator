@@ -2,18 +2,31 @@ import {handleField} from './generator'
 
 
 function matrixColumnHasValue(params) {
-  if(!params || params.length !== 3) return false;
-  var arr = params[0];
-  var colName = params[1];
-  var value = params[2];
-  var el;
-  if(!arr || !Array.isArray(arr)) return false;
-  for(var i = 0; i <arr.length; i ++) {
-    el = arr[i];
-    if(!!el && el[colName] == value) return true;
+  if(!params || params.length !== 3) 
+    return false;
+  const rows = params[0];
+  const colName = params[1];
+  let values = params[2];
+  if (!Array.isArray(values)) {
+    values = [values];
   }
-  return false;
+
+  if(!rows || !Array.isArray(rows))
+    return false;
+
+  function valueInMatrix(val){
+    var row;
+    for(var i = 0; i < rows.length; i ++) {
+      row = rows[i];
+      if(!!row && row[colName] == val)
+        return true;
+    }
+    return false;
+  }
+
+  return values.reduce((acc, val) => acc || valueInMatrix(val), false)
 }
+
 Survey.FunctionFactory.Instance.register("matrixColumnHasValue", matrixColumnHasValue);
 
 function surveyOnSamePage(survey) {
