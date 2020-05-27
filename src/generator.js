@@ -10,17 +10,14 @@
  * 
  * @return {Object} generated response
  */
-function handleField(field, results={}) {
+function handleField(field, caseNum) {
   const type = field.type;
-
-  if (results.hasOwnProperty(field.name))
-    return {};
 
   if (type === 'boolean')
     return booleanGenerator(field);
 
   if (type === 'text')
-    return textGenerator(field);
+    return textGenerator(field, caseNum);
 
   if (type === 'radiogroup')
     return radioGroupGenerator(field);
@@ -38,10 +35,10 @@ function handleField(field, results={}) {
     return ratingGenerator(field);
 
   if (type === 'multipletext')
-    return multipleTextGenerator(field);
+    return multipleTextGenerator(field, caseNum);
 
   if (type === 'matrixdynamic')
-    return matrixDynamicGenerator(field);
+    return matrixDynamicGenerator(field, caseNum);
 
 
   return {};
@@ -85,13 +82,13 @@ function booleanGenerator({type, name, labelTrue, labelFalse}) {
  * @param  {String} isRequired
  * @param  {String} inputType}
  */
-function textGenerator({type, name, title, isRequired, inputType}) {
+function textGenerator({type, name, title, isRequired, inputType}, caseNum) {
   const result = {};
 
   if (inputType == 'number')
     result[name] = Math.floor(Math.random() * 100);
   else
-    result[name] = generateText(name);
+    result[name] = generateText(name, caseNum);
   
   return result;
 }
@@ -176,9 +173,9 @@ function ratingGenerator({type, rateValues, name, rateMax}) {
  * @param  {String} name
  * @param  {String} items}
  */
-function multipleTextGenerator({type, name, items}) {
+function multipleTextGenerator({type, name, items}, caseNum) {
   const tags = items.reduce((acc, item) => {
-    return {...acc, ...{ [item.name]: generateText(item.name)}}
+    return {...acc, ...{ [item.name]: generateText(item.name, caseNum)}}
   }, {})
 
   return {
@@ -192,7 +189,7 @@ function multipleTextGenerator({type, name, items}) {
  * @param  {Name} name
  * @param  {Array} columns}
  */
-function matrixDynamicGenerator({type, name, columns, choices}) {
+function matrixDynamicGenerator({type, name, columns, choices}, caseNum) {
   const numRow = Math.floor(Math.random() * 3)
   const rows = [];
   while(rows.length <= numRow) {
@@ -208,7 +205,7 @@ function matrixDynamicGenerator({type, name, columns, choices}) {
       if (_field.type === 'dropdown' && !_field.choices)
         _field.choices = choices;
         
-      rowResults = {...rowResults, ...handleField(_field)}
+      rowResults = {...rowResults, ...handleField(_field, caseNum)}
     })
     rows.push(rowResults);
   }
@@ -218,8 +215,8 @@ function matrixDynamicGenerator({type, name, columns, choices}) {
   }
 }
 
-function generateText(name='') {
-  return `Generated ${name}`;
+function generateText(name='', caseNum) {
+  return `Generated ${name} ${caseNum? 'case: ' + caseNum : ''}`;
 }
 
 /**

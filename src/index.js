@@ -108,7 +108,7 @@ new Vue({
         
         const possibleResults = []
         for(let i=0; i < this.state.numberCase; i++) {
-          this.state.survey.pages[0].elements.forEach((element) => handleElement(element))
+          this.state.survey.pages[0].elements.forEach((element) => handleElement(element, i))
           const data = JSON.parse(JSON.stringify(this.state.survey.data, null, 2));
   
           if (i < this.state.numberCase - 1) {
@@ -154,12 +154,12 @@ function copyToClipboard(str) {
   document.body.removeChild(el);
 };
 
-function handleElement(element) {
+function handleElement(element, caseNum) {
   if (!element.isVisible || element.isAnswered)
     return
 
   if (element.getType() === 'panel')
-    return element.elements.forEach((elem) => handleElement(elem));
+    return element.elements.forEach((elem) => handleElement(elem, caseNum));
 
   if (element.getType() ==='html')
     return
@@ -169,6 +169,6 @@ function handleElement(element) {
   if (!field)
     console.log(element)
 
-  const response = handleField(field);
+  const response = handleField(field, caseNum);
   element.setNewValueInData(response[element.name])
 }
