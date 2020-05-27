@@ -1,4 +1,21 @@
 
+
+# DEV
+```sh
+ npm run watch
+ open index.html
+```
+
+# DEPLOY
+
+The app is served as a github page linked to the master branch
+
+```sh
+npm run build
+git push
+```
+
+
 # FIELD
 
 Describe surveyjs type of fields
