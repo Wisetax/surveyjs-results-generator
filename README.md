@@ -1,5 +1,8 @@
 
 
+Deploy as a github page:
+https://stanbienaives.github.io/surveyjs-results-generator/
+
 # DEV
 ```sh
  npm run watch
