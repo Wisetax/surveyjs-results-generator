@@ -10,7 +10,7 @@
  * 
  * @return {Object} generated response
  */
-function handleField(field, caseNum) {
+function handleField(field, caseNum, preset) {
   const type = field.type;
 
   if (type === 'boolean')
@@ -35,10 +35,10 @@ function handleField(field, caseNum) {
     return ratingGenerator(field);
 
   if (type === 'multipletext')
-    return multipleTextGenerator(field, caseNum);
+    return multipleTextGenerator(field, caseNum, preset);
 
   if (type === 'matrixdynamic')
-    return matrixDynamicGenerator(field, caseNum);
+    return matrixDynamicGenerator(field, caseNum, preset);
 
 
   return {};
@@ -54,7 +54,7 @@ function generateResponse(survey) {
   let results = {};
   survey.pages.forEach((page) => {
     page.elements.forEach((element) => {
-        results = {...results, ...handleField(element)}
+        results = {...handleField(element), ...results}
     });
   });
 
@@ -173,9 +173,11 @@ function ratingGenerator({type, rateValues, name, rateMax}) {
  * @param  {String} name
  * @param  {String} items}
  */
-function multipleTextGenerator({type, name, items}, caseNum) {
+function multipleTextGenerator({type, name, items}, caseNum, preset) {
+  console.log(preset)
+
   const tags = items.reduce((acc, item) => {
-    return {...acc, ...{ [item.name]: generateText(item.name, caseNum)}}
+    return {...acc, ...{ [item.name]: (preset && preset[item.name]) || generateText(item.name, caseNum)}}
   }, {})
 
   return {
@@ -189,13 +191,25 @@ function multipleTextGenerator({type, name, items}, caseNum) {
  * @param  {Name} name
  * @param  {Array} columns}
  */
-function matrixDynamicGenerator({type, name, columns, choices}, caseNum) {
-  const numRow = Math.floor(Math.random() * 3)
+function matrixDynamicGenerator({type, name, columns, choices}, caseNum, preset) {
+  const numRow = (preset && preset.length) || Math.ceil(Math.random() * 4)
   const rows = [];
-  while(rows.length <= numRow) {
+  while(rows.length < numRow) {
     let rowResults = {};
+    const presetRow = preset && preset[rows.length];
+    
     columns.forEach((field) => {
       const _field = {...field}
+
+      if (presetRow) {
+        const presetField = presetRow[field.name]
+
+        if (presetField) {
+          rowResults = {...rowResults, [field.name]: presetField}
+          return;
+        }
+      }
+        
 
       if (_field.cellType)
         _field.type = _field.cellType;
@@ -204,11 +218,14 @@ function matrixDynamicGenerator({type, name, columns, choices}, caseNum) {
       
       if (_field.type === 'dropdown' && !_field.choices)
         _field.choices = choices;
-        
+
       rowResults = {...rowResults, ...handleField(_field, caseNum)}
     })
+    console.log(rowResults);
     rows.push(rowResults);
   }
+
+  console.log('length', rows.length);
 
   return {
     [name]: rows,

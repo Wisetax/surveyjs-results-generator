@@ -122,9 +122,9 @@ new Vue({
         console.log(possibleResults);
   
         downloadJSONfile(possibleResults);
-        copyToClipboard(JSON.stringify(possibleResults, null, 2));
+        // copyToClipboard(JSON.stringify(possibleResults, null, 2));
         setTimeout(() => {
-          alert('Possible Results Copied to clipboard');
+          alert('Possible Results generated');
         }, 1000)
   
         this.state.loading = false;
@@ -155,6 +155,7 @@ function copyToClipboard(str) {
 };
 
 function handleElement(element, caseNum) {
+
   if (!element.isVisible || element.isAnswered)
     return
 
@@ -169,6 +170,8 @@ function handleElement(element, caseNum) {
   if (!field)
     console.log(element)
 
-  const response = handleField(field, caseNum);
+  const preset = element.getPlainData().value ? JSON.parse(JSON.stringify(element.getPlainData().value)) : undefined;
+
+  const response = handleField(field, caseNum, preset);
   element.setNewValueInData(response[element.name])
 }

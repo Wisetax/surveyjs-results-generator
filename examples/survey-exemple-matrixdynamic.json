@@ -1,0 +1,142 @@
+{
+ "locale": "fr",
+ "pages": [
+  {
+   "name": "siege",
+   "elements": [
+    {
+     "type": "matrixdynamic",
+     "name": "activiteMondes",
+     "title": {
+      "fr": "Indiquez les principaux Etats / territoire où le groupe / la société exerce son activité (hors France)"
+     },
+     "isRequired": true,
+     "columns": [
+      {
+       "name": "etatMondeActiviteSociete",
+       "title": {
+        "fr": "Nom de l'Etat / du terriroire"
+       },
+       "cellType": "dropdown",
+       "isRequired": true
+      },
+      {
+       "name": "moyenHumainSocieteMonde",
+       "title": {
+        "fr": "La société / le groupe  emploie..."
+       },
+       "cellType": "dropdown",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "zero",
+         "text": {
+          "fr": "0 employé"
+         }
+        },
+        {
+         "value": "dix",
+         "text": {
+          "fr": "1-10 employés"
+         }
+        },
+        {
+         "value": "cinquante",
+         "text": {
+          "fr": "1-50"
+         }
+        },
+        {
+         "value": "cinquanteToCinqCent",
+         "text": {
+          "fr": "50-500"
+         }
+        },
+        {
+         "value": "cinqCent",
+         "text": {
+          "fr": "plus de 500"
+         }
+        }
+       ]
+      },
+      {
+       "name": "moyenMaterielSocieteMonde",
+       "title": {
+        "fr": "Le groupe dispose dans cet Etat"
+       },
+       "cellType": "radiogroup",
+       "isRequired": true,
+       "choices": [
+        {
+         "value": "succursale",
+         "text": {
+          "fr": "de succursale(s)"
+         }
+        },
+        {
+         "value": "filiale",
+         "text": {
+          "fr": "de filiale(s)"
+         }
+        },
+        {
+         "value": "bureauRepresentation",
+         "text": {
+          "fr": "d'un bureau de liaison / représentation"
+         }
+        },
+        {
+         "value": "chantier",
+         "text": {
+          "fr": "d'un chantier de construction"
+         }
+        }
+       ]
+      }
+     ],
+     "choices": [
+      {
+       "value": "afghanistan",
+       "text": "Afghanistan"
+      },
+      {
+       "value": "afrique du sud",
+       "text": "Afrique Du Sud"
+      },
+      {
+       "value": "vietNam",
+       "text": "Viet Nam"
+      },
+      {
+       "value": "wallisFutuna",
+       "text": "Wallis et Futuna"
+      },
+      {
+       "value": "yemen",
+       "text": "Yémen"
+      },
+      {
+       "value": "zambie",
+       "text": "Zambie"
+      },
+      {
+       "value": "zimbabwe",
+       "text": "Zimbabwe"
+      }
+     ],
+     "addRowText": {
+      "fr": "Ajouter un Etat "
+     },
+     "removeRowText": {
+      "fr": "Supprimer un Etat "
+     }
+    }
+   ]
+  }
+ ],
+ "showQuestionNumbers": "off",
+ "showProgressBar": "bottom",
+ "pagePrevText": "Précédente",
+ "pageNextText": "Suivante"
+}

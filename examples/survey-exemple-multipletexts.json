@@ -1,0 +1,41 @@
+{
+ "locale": "fr",
+ "pages": [
+  {
+   "name": "siege",
+   "elements": [
+    {
+      "type": "multipletext",
+      "name": "tagsConsultation1",
+      "title": {
+        "fr": "Indiquez ci-après problématique fiscale en 5 mots-clés / tags (ex. : tva / établissement stable / chantier /  capacité / employeur)"
+      },
+      "items": [
+        {
+          "name": "tag1",
+          "title": {
+            "fr": "Tag 1"
+          }
+        },
+        {
+          "name": "tag2",
+          "title": {
+            "fr": "Tag 2"
+          }
+        },
+        {
+          "name": "tag3",
+          "title": "Tag 3"
+        },
+        {
+          "name": "tag4",
+          "title": "Tag 4"
+        },
+        {
+          "name": "tag5",
+          "title": "Tag 5"
+        }
+      ]
+    }]
+  }]
+}
