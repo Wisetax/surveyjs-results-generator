@@ -1,7 +1,7 @@
 
 
 Deploy as a github page:
-https://stanbienaives.github.io/surveyjs-results-generator/
+https://wisetax.github.io/surveyjs-results-generator/
 
 # DEV
 ```sh
