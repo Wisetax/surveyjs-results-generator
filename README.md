@@ -263,6 +263,8 @@ type: `matrixdynamic`
 }
 ```
 
+
+
 * Result
 ```json
 {
@@ -274,6 +276,87 @@ type: `matrixdynamic`
           "emailAddress": "sebastien@gmail.com"
       }
   ],
+}
+```
+
+## MatrixDropDown
+type: `matrixdropdown`
+
+* Survey
+```json
+{
+  "type": "matrixdropdown",
+  "name": "descriptionRevenuImmobilierOptables",
+  "defaultValue": {
+      "locationNus": {
+      "montantInputTva": "0",
+      "montantOutputTurnover": "0"
+    },
+      "locationImmeuble": {
+      "montantInputTva": "0",
+      "montantOutputTurnover": "0"
+    },
+      "locationTerreAgricole": {
+      "montantInputTva": "0",
+      "montantOutputTurnover": "0"
+    }
+  },
+  "isRequired": true,
+  "columns": [
+    {
+      "name": "option",
+      "cellType": "boolean",
+      "isRequired": true
+    },
+    {
+      "name": "montantInputTva",
+      "cellType": "text",
+      "isRequired": true,
+      "defaultValue": "0"
+    },
+    {
+      "name": "montantOutputTurnover",
+      "cellType": "text",
+      "isRequired": true,
+      "defaultValue": "0"
+    }
+  ],
+  "choices": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "cellType": "boolean",
+  "rows": [
+    "locationNus",
+    "locationImmeuble",
+    "locationTerreAgricole"
+  ]
+}
+```
+
+* Results
+```json
+{
+ "descriptionRevenuImmobilierOptables": {
+      "locationNus": {
+        "option": true,
+        "montantInputTva": "azqsdqdq",
+        "montantOutputTurnover": "qsdqds"
+      },
+      "locationImmeuble": {
+        "option": false,
+        "montantInputTva": "qsdsq",
+        "montantOutputTurnover": "qsdqsd"
+      },
+      "locationTerreAgricole": {
+        "option": true,
+        "montantInputTva": "qsdsqd",
+        "montantOutputTurnover": "qdsqsdq"
+      }
+    }
 }
 ```
 

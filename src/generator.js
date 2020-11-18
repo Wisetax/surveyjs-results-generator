@@ -40,6 +40,9 @@ function handleField(field, caseNum, preset) {
   if (type === 'matrixdynamic')
     return matrixDynamicGenerator(field, caseNum, preset);
 
+  if (type === 'matrixdropdown')
+    return matrixDropdownGenerator(field, caseNum, preset);
+
 
   return {};
 }
@@ -184,6 +187,53 @@ function multipleTextGenerator({type, name, items}, caseNum, preset) {
     [name]: tags,
   }
 }
+
+
+
+/**
+ * Generate response for matrix dynamic
+ * @param  {String} {name name of the question
+ * @param  {Array<String>} rows list of row in the matrix dropdown
+ * @param  {Array} columns}  fields in columns
+ */
+function matrixDropdownGenerator({columns, name, rows}, caseNum, preset) {
+  const res = {};
+  rows.forEach((row) => {
+    let rowResults = {};
+    const presetRow = preset && preset[row];
+    
+    columns.forEach((field) => {
+      const _field = {...field}
+
+      if (presetRow) {
+        const presetField = presetRow[field.name]
+
+        if (presetField) {
+          rowResults = {...rowResults, [field.name]: presetField}
+          return;
+        }
+      }
+        
+
+      if (_field.cellType)
+        _field.type = _field.cellType;
+      else
+        _field.type = 'dropdown';
+      
+      if (_field.type === 'dropdown' && !_field.choices)
+        _field.choices = choices;
+
+      rowResults = {...rowResults, ...handleField(_field, caseNum)}
+    })
+    console.log(rowResults);
+    res[row] = rowResults;
+  })
+
+  return {
+    [name]: res,
+  }
+}
+
 
 /**
  * Generate response for matrix dynamic
