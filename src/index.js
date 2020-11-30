@@ -156,13 +156,16 @@ function copyToClipboard(str) {
 
 function handleElement(element, caseNum) {
 
-  if (!element.isVisible || element.isAnswered)
-    return
 
   if (element.getType() === 'panel')
     return element.elements.forEach((elem) => handleElement(elem, caseNum));
 
   if (element.getType() ==='html')
+    return
+
+  const matrixWithAllDefault = handleMatrixDropdown(element)
+  console.log(matrixWithAllDefault);
+  if ((!element.isVisible || element.isAnswered) && !matrixWithAllDefault)
     return
 
   const field = element.getConditionJson()
@@ -174,4 +177,27 @@ function handleElement(element, caseNum) {
 
   const response = handleField(field, caseNum, preset);
   element.setNewValueInData(response[element.name])
+}
+
+
+function handleMatrixDropdown(element) {
+  // check if type is matricdropdown 
+  if (element.getType() !== 'matrixdropdown') {
+    return false;
+  }
+
+
+  const defaults = element.columns.reduce((acc, col) => {
+    return {[col.name]: col.defaultValue, ...acc}
+  }, {})
+
+  const allDefault = Object.keys(defaults).reduce((acc, key) => {
+    return acc && defaults[key] !== undefined;
+  }, true)
+
+  if (allDefault)
+    return true
+
+  return false;
+
 }
