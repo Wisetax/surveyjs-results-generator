@@ -200,6 +200,9 @@ function matrixDropdownGenerator({columns, name, rows}, caseNum, preset) {
   const res = {};
   rows.forEach((row) => {
     let rowResults = {};
+    if (row.value)
+      row = row.value
+      
     const presetRow = preset && preset[row];
     
     columns.forEach((field) => {

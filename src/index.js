@@ -163,9 +163,8 @@ function handleElement(element, caseNum) {
   if (element.getType() ==='html')
     return
 
-  const matrixWithAllDefault = handleMatrixDropdown(element)
-  console.log(matrixWithAllDefault);
-  if ((!element.isVisible || element.isAnswered) && !matrixWithAllDefault)
+  let defaultCaseForce = isMatrixDropdownDefault(element)
+  if ((!element.isVisible || element.isAnswered) && !defaultCaseForce)
     return
 
   const field = element.getConditionJson()
@@ -179,12 +178,16 @@ function handleElement(element, caseNum) {
   element.setNewValueInData(response[element.name])
 }
 
-
-function handleMatrixDropdown(element) {
+/**
+ * Handle Matrix Dropdown appear as answered is default values are set
+ * @param  {} element
+ */
+function isMatrixDropdownDefault(element) {
   // check if type is matricdropdown 
   if (element.getType() !== 'matrixdropdown') {
     return false;
   }
+
 
 
   const defaults = element.columns.reduce((acc, col) => {
@@ -198,6 +201,23 @@ function handleMatrixDropdown(element) {
   if (allDefault)
     return true
 
-  return false;
+  if (!element.defaultValue)
+    return false;
 
+  if (JSON.stringify(element.defaultValue) == JSON.stringify(element.getPlainData().value)) {
+    element.clearValue()
+    return true;
+  }
+
+
+  return false;
 }
+
+
+// function handleMultipleText(element) {
+//   if (element.getType() !== 'multipletext') {
+//     return false;
+//   }
+
+//   const default = element.ge
+// }
