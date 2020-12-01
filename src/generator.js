@@ -177,10 +177,14 @@ function ratingGenerator({type, rateValues, name, rateMax}) {
  * @param  {String} items}
  */
 function multipleTextGenerator({type, name, items}, caseNum, preset) {
-  console.log(preset)
 
   const tags = items.reduce((acc, item) => {
-    return {...acc, ...{ [item.name]: (preset && preset[item.name]) || generateText(item.name, caseNum)}}
+    let res = {};
+    if (preset && preset[item.name])
+      res[item.name] = preset[item.name]
+    else
+      res = textGenerator(item, caseNum)
+    return {...acc, ...res}
   }, {})
 
   return {
@@ -202,7 +206,7 @@ function matrixDropdownGenerator({columns, name, rows}, caseNum, preset) {
     let rowResults = {};
     if (row.value)
       row = row.value
-      
+
     const presetRow = preset && preset[row];
     
     columns.forEach((field) => {
@@ -228,7 +232,6 @@ function matrixDropdownGenerator({columns, name, rows}, caseNum, preset) {
 
       rowResults = {...rowResults, ...handleField(_field, caseNum)}
     })
-    console.log(rowResults);
     res[row] = rowResults;
   })
 
@@ -274,11 +277,9 @@ function matrixDynamicGenerator({type, name, columns, choices}, caseNum, preset)
 
       rowResults = {...rowResults, ...handleField(_field, caseNum)}
     })
-    console.log(rowResults);
     rows.push(rowResults);
   }
 
-  console.log('length', rows.length);
 
   return {
     [name]: rows,

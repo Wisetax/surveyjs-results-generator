@@ -119,7 +119,6 @@ new Vue({
           possibleResults.push(data);
         }
   
-        console.log(possibleResults);
   
         downloadJSONfile(possibleResults);
         // copyToClipboard(JSON.stringify(possibleResults, null, 2));
@@ -163,14 +162,12 @@ function handleElement(element, caseNum) {
   if (element.getType() ==='html')
     return
 
-  let defaultCaseForce = isMatrixDropdownDefault(element)
+  let defaultCaseForce = isMatrixDropdownDefault(element) || isMultipleTextDefault(element)
   if ((!element.isVisible || element.isAnswered) && !defaultCaseForce)
     return
 
   const field = element.getConditionJson()
 
-  if (!field)
-    console.log(element)
 
   const preset = element.getPlainData().value ? JSON.parse(JSON.stringify(element.getPlainData().value)) : undefined;
 
@@ -179,16 +176,33 @@ function handleElement(element, caseNum) {
 }
 
 /**
- * Handle Matrix Dropdown appear as answered is default values are set
- * @param  {} element
+ * Handle multiple text appear as answered when default values are set
+ * @param  {Element} element survey js form element
+ * 
  */
+function isMultipleTextDefault(element) {
+  if (element.getType() !== 'multipletext')
+    return false
+
+  if (JSON.stringify(element.defaultValue) == JSON.stringify(element.getPlainData().value)) {
+    element.clearValue()
+    return true;
+  }
+
+  return false;
+}
+
+/**
+ * Handle Matrix Dropdown appear as answered is default values are set
+ * @param  {Element} element surveyjs form element
+ * 
+ */
+
 function isMatrixDropdownDefault(element) {
   // check if type is matricdropdown 
   if (element.getType() !== 'matrixdropdown') {
     return false;
   }
-
-
 
   const defaults = element.columns.reduce((acc, col) => {
     return {[col.name]: col.defaultValue, ...acc}
