@@ -156,8 +156,12 @@ function copyToClipboard(str) {
 function handleElement(element, caseNum) {
 
 
-  if (element.getType() === 'panel')
+  if (element.getType() === 'panel') {
+    if (!element.isVisible)
+      return
     return element.elements.forEach((elem) => handleElement(elem, caseNum));
+
+  }
 
   if (element.getType() ==='html')
     return
